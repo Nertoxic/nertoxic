@@ -16,4 +16,9 @@ echo "<script>console.log('Error: ".$nicConsoleErrorDesc."');</script>";
 echo "<script>console.log('');</script>";
 echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
 
+if($nicConsoleErrorCritical == "true") {
+    include BASE_PATH.'nic/out/error.html';
+    die();
+}
+
 ?>
