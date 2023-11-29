@@ -12,7 +12,7 @@
 
 if($geoLocation_plain == NULL) {
     $nicConsoleErrorFile = "system/visitor/nicVisLoc.php";
-    $nicConsoleErrorCritical = "false";
+    $nicConsoleErrorCritical = "true";
     $nicConsoleErrorDesc = "There was an error while loading the geolocation of the visitor, this module wont work now";
     include BASE_PATH.'nic/core/nicConsole.php';
 }
