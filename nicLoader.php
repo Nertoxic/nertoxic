@@ -38,14 +38,14 @@ include BASE_PATH.'nic/visitor/nicVisLoc.php'; # Load visitor tracking module [h
 
 catch (Exception $e) {
 
-    include BASE_PATH.'app/nic/display/error_frame_loading.html';
+    include BASE_PATH.'system/core/out/error_frame_loading.html';
     echo "<script>console.log('[NERTOXIC] There was an error while loading the nicLoader.php, please check it for errors and check if every file is at the correct path' );</script>";
     die();
 
 }
 
 if($nic_version == NULL) {
-    include BASE_PATH.'app/nic/display/error_frame_loading.html';
+    include BASE_PATH.'system/core/out/error_frame_loading.html';
     echo "<script>console.log('[NERTOXIC] There was an error while reading the file nicVersion.php, please check if the file is placed at the base_path' );</script>";
     die();
 }
