@@ -12,7 +12,6 @@ try {
 
 // nicLoader
 define('BASE_PATH', __DIR__.'/');
-dfn("dd");
 
 } 
 
