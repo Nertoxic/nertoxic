@@ -11,6 +11,7 @@
 if ($env === false) {
 
     include BASE_PATH.'app/nic/display/error_env_not_loaded.html';
+    debug_to_console("The .env file, inside the BASE_PATH, couldnt be loaded. Please check the file for errors");
     die();
 
 } else {
