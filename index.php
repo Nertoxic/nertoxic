@@ -29,7 +29,9 @@
                     </div>
                 </div>
                 <center>
-                <small class="px-4 text-lg text-gray-500 border-gray-400 align-center">hey</small>
+                <small class="px-4 text-lg text-gray-500 border-gray-400 align-center">
+                    There was an setup error, please contact the system administrator to change the default path to /public/
+                </small>
                 </center>
             </div>
         </div>
