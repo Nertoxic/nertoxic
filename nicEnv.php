@@ -8,7 +8,7 @@
 #
 #
 
-$env = parse_ini_file(BASE_PATH.'.env');
+$env = parse_ini_file('.env');
 if ($env === false) {
 
     include BASE_PATH.'app/nic/display/error_env_not_loaded.html';
