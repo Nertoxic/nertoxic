@@ -8,7 +8,7 @@
 #
 #
 
-$env = parse_ini_file('.env');
+$env = parse_ini_file(BASE_PATH.'.env');
 include BASE_PATH.'nic/core/nicEnvLoader.php';
 
 ?>
