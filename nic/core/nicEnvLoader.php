@@ -10,7 +10,7 @@
 
 if ($env === false) {
 
-    include BASE_PATH.'system/out/error_env_not_loaded.html';
+    include BASE_PATH.'nic/out/error_env_not_loaded.html';
     echo "<script>console.log('[NERTOXIC] The .env file inside the base-path couldnt be loaded, please check if the file contains error and is placed correctly' );</script>";
     die();
 
