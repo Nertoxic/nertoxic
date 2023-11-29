@@ -29,6 +29,10 @@ include BASE_PATH.'nic/visitor/nicVisLoc.php'; # Load visitor tracking module [h
 # These files are basic files which adding some cool features to the framework
 # --------------------------------------------------------------------
 
+if($NIC_MYSQL_HOST == "mysql") {
+    include BASE_PATH.'nic/database/MySQL/mysqlBuild.php';
+}
+
 } 
 
 
