@@ -12,9 +12,13 @@
 
 if($geoLocation_plain == NULL) {
     # Place to insert html error
-    echo "<script>console.log('---------------------- [NERTOXIC] ----------------------' );</script>";
-    echo "<script>console.log('[NERTOXIC] Non-Critical: There was an error while loading geoLocation Informations about the visitor' );</script>";
-    echo "<script>console.log('---------------------- [NERTOXIC] ----------------------' );</script>";
+    echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
+    echo "<script>console.log('');</script>";
+    echo "<script>console.log('Ciritcal: No');</script>";
+    echo "<script>console.log('File: system/visitor/nicVisLoc.php');</script>";
+    echo "<script>console.log('Error: There was an error while loading the geolocation of the visitor, this module wont work now.');</script>";
+    echo "<script>console.log('');</script>";
+    echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
     die();
 }
 
