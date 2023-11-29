@@ -34,6 +34,7 @@ include BASE_PATH.'nic/visitor/nicVisLoc.php'; # Load visitor tracking module [h
 catch (Exception $e) {
 
     include BASE_PATH.'app/nic/display/error_frame_loading.html';
+    die();
 
 }
 ?>

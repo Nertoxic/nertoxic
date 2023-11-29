@@ -10,7 +10,8 @@
 
 if ($env === false) {
 
-    die('The env file couldnt be loaded');
+    include BASE_PATH.'app/nic/display/error_env_not_loaded.html';
+    die();
 
 } else {
 
