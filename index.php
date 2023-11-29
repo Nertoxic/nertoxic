@@ -28,7 +28,7 @@
                         ERROR
                     </div>
                 </div>
-                <small>hey</small>
+                <small class="px-4 text-lg text-gray-500 border-r border-gray-400 tracking-wider">hey</small>
             </div>
         </div>
     </body>
