@@ -9,6 +9,18 @@
 #
 
 $env = parse_ini_file(BASE_PATH.'.env');
-include BASE_PATH.'nic/core/nicEnvLoader.php';
+if ($env === false) {
+
+    include BASE_PATH.'app/nic/display/error_env_not_loaded.html';
+    echo "<script>console.log('[NERTOXIC] The .env file inside the base-path couldnt be loaded, please check if the file contains error and is placed correctly' );</script>";
+    die();
+
+} else {
+
+    $NIC_LICENSE = $env['NIC_LICENSE'];
+    $NIC_ENV_TYPE = $env['NIC_ENV_TYPE'];
+    $NIC_BASE_URI = $env['NIC_BASE_URL'];
+
+}
 
 ?>
