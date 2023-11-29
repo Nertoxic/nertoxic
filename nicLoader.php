@@ -55,4 +55,11 @@ if($nic_version == NULL) {
     $nicConsoleErrorDesc = "The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.";
     include BASE_PATH.'nic/core/nicConsole.php';
 }
+
+if($db == NULL) {
+    $nicConsoleErrorFile = "nicLoader.php";
+    $nicConsoleErrorCritical = "true";
+    $nicConsoleErrorDesc = "The backend couldnt connect to the database correctly, please check your variables";
+    include BASE_PATH.'nic/core/nicConsole.php';
+}
 ?>
