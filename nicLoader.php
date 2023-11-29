@@ -38,15 +38,17 @@ include BASE_PATH.'nic/visitor/nicVisLoc.php'; # Load visitor tracking module [h
 
 catch (Exception $e) {
 
-    include BASE_PATH.'nic/out/error_frame_loading.html';
-    echo "<script>console.log('[NERTOXIC] There was an error while loading the nicLoader.php, please check it for errors and check if every file is at the correct path' );</script>";
-    die();
+    $nicConsoleErrorFile = "nicLoader.php";
+    $nicConsoleErrorCritical = "true";
+    $nicConsoleErrorDesc = "The loader couldnt be loaded, this means the backend currently cant build up. Please check last edited files and check the php log";
+    include BASE_PATH.'nic/core/nicConsole.php';
 
 }
 
 if($nic_version == NULL) {
-    include BASE_PATH.'nic/out/error_frame_loading.html';
-    echo "<script>console.log('[NERTOXIC] There was an error while reading the file nicVersion.php, please check if the file is placed at the base_path' );</script>";
-    die();
+    $nicConsoleErrorFile = "nicVerion.php";
+    $nicConsoleErrorCritical = "true";
+    $nicConsoleErrorDesc = "The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.";
+    include BASE_PATH.'nic/core/nicConsole.php';
 }
 ?>

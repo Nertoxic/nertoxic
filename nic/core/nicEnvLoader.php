@@ -10,9 +10,10 @@
 
 if ($env === false) {
 
-    include BASE_PATH.'nic/out/error_env_not_loaded.html';
-    echo "<script>console.log('[NERTOXIC] The .env file inside the base-path couldnt be loaded, please check if the file contains error and is placed correctly' );</script>";
-    die();
+    $nicConsoleErrorFile = ".env";
+    $nicConsoleErrorCritical = "true";
+    $nicConsoleErrorDesc = "The .env couldnt be loaded, please check it for any errors and check your server console";
+    include BASE_PATH.'nic/core/nicConsole.php';
 
 } else {
 

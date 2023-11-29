@@ -8,9 +8,9 @@
 #
 #
 
-try {
-    include 'nic/out/error_public_path.html'; 
-} catch (Exception $e) {
-    print_r("There was a fatal error while loading the error page. Please contact the system administrator to fix the routing.");
-}
+$nicConsoleErrorFile = "index.php";
+$nicConsoleErrorCritical = "true";
+$nicConsoleErrorDesc = "You need to set the entry point for your webhosting to the /public/ folder";
+include 'nicLoader.php';
+include BASE_PATH.'nic/core/nicConsole.php';
 ?>
