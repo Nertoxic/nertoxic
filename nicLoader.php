@@ -23,7 +23,7 @@ include BASE_PATH.'nicVersion.php'; # Load NIC Version
 # These files are core files, if these files doesnt work the whole system cant work correctly
 # --------------------------------------------------------------------
 
-include BASE_PATH.'nic/visitor/nicVisLoc.php'; # Load visitor tracking module [http://www.geoplugin.net]
+#include BASE_PATH.'nic/visitor/nicVisLoc.php'; # Load visitor tracking module [http://www.geoplugin.net]
 
 # --------------------------------------------------------------------
 # These files are basic files which adding some cool features to the framework
