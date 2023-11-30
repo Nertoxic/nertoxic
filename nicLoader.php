@@ -51,6 +51,12 @@ if($nicPageType == "module_test") {
     }
 }
 
+if($nicPageType == "setuped") {
+    if($nicConsoleErrorFile == NULL) {
+        include BASE_PATH.'nic/out/default.html';
+    }
+}
+
 } // try end
 
 # --------------------------------------------------------------------
@@ -82,7 +88,7 @@ if($db ==! NULL) {
 
 if($nicPageType == "framework_test") {
     if($nicConsoleErrorFile == NULL) {
-        include BASE_PATH.'nic/out/success_module_system.html';
+        include BASE_PATH.'nic/out/success_framework.html';
     }
 }
 ?>
