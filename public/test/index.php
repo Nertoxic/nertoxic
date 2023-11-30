@@ -11,4 +11,4 @@ $nicPageType = "x";
 include '../../nicLoader.php';
 ?>
 
-<?= $httpScheme; ?>
+<?= $httpAddr; ?>
