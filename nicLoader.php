@@ -9,6 +9,7 @@
 #
 
 define('BASE_PATH', __DIR__.'/');
+$nicConsoleErrorFile = 0;
 
 try {
 
@@ -77,5 +78,11 @@ if($db ==! NULL) {
     $nicConsoleErrorCritical = "true";
     $nicConsoleErrorDesc = "The backend couldnt connect to the database correctly, please check your variables";
     include BASE_PATH.'nic/core/nicConsole.php';
+}
+
+if($nicPageType == "framework_test") {
+    if($nicConsoleErrorFile == NULL) {
+        include BASE_PATH.'nic/out/success_module_system.html';
+    }
 }
 ?>
