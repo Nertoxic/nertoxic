@@ -25,5 +25,5 @@ parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH)🡺  /subFolder/myfile.php
 $_SERVER["PHP_SELF"]       🡺                       /subFolder/myfile.php
 */
 
-$httpScheme = $x['scheme'];
+$httpAddr = $_SERVER['scheme'];
 ?>
