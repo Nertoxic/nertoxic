@@ -41,15 +41,12 @@ include BASE_PATH.'nic/modules/nicModules.php'; # Load all included modules
 
 if($nicPageType == "module_test") {
     if($nicModuleOutput_example == true) {
-        echo("
-         _   _ _____ ____ _____ _____  _____ ____ <br>
-        | \ | | ____|  _ \_   _/ _ \ \/ /_ _/ ___|<br>
-        |  \| |  _| | |_) || || | | \  / | | |    <br>
-        | |\  | |___|  _ < | || |_| /  \ | | |___ <br>
-        |_| \_|_____|_| \_\|_| \___/_/\_\___\____|<br>
-        <br><br>
-        The module System is working as excpected.
-        ");
+        include BASE_PATH.'nic/core/out/success_module_system.html';
+    } else {
+        $nicConsoleErrorFile = "nicLoader.php";
+        $nicConsoleErrorCritical = "true";
+        $nicConsoleErrorDesc = "The module System isnt working, please check the folder /nic/modules/*";
+        include BASE_PATH.'nic/core/nicConsole.php';
     }
 }
 
