@@ -33,6 +33,8 @@ if($NIC_MYSQL_HOST == "mysql") {
     include BASE_PATH.'nic/database/MySQL/mysqlBuild.php';
 }
 
+include BASE_PATH.'nic/modules/nicModules.php';
+
 } 
 
 
@@ -56,7 +58,7 @@ if($nic_version == NULL) {
     include BASE_PATH.'nic/core/nicConsole.php';
 }
 
-if($db == NULL) {
+if($db ==! NULL) {
     $nicConsoleErrorFile = "nicLoader.php";
     $nicConsoleErrorCritical = "true";
     $nicConsoleErrorDesc = "The backend couldnt connect to the database correctly, please check your variables";
