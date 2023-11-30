@@ -33,10 +33,17 @@ if($NIC_MYSQL_HOST == "mysql") {
     include BASE_PATH.'nic/database/MySQL/mysqlBuild.php';
 }
 
-include BASE_PATH.'nic/modules/nicModules.php';
+include BASE_PATH.'nic/modules/nicModules.php'; # Load all included modules
 
-} 
+# --------------------------------------------------------------------
+# Output (testing, header, footer etc.)
+# --------------------------------------------------------------------
 
+if($nicPageType == "module_test") {
+    return $nicModuleOutput_example;
+}
+
+} // try end
 
 # --------------------------------------------------------------------
 # Error handling

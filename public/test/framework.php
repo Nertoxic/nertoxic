@@ -7,6 +7,10 @@
 # |_| \_|_____|_| \_\|_| \___/_/\_\___\____|
 #
 #
-
+$nicPageType = "front";
 include '../../nicLoader.php';
 ?>
+
+<? //php Content ?>
+
+<? //footer include ?>
