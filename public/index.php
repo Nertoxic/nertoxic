@@ -9,7 +9,7 @@
 #
 
 try {
-    include '../system/core/out/error_content_default.html'; 
+    include '../nic/out/default.html'; 
 } catch (Exception $e) {
     print_r("There was a fatal error while loading the error page. Please contact the system administrator to fix the routing.");
 }
