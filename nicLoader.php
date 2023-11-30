@@ -40,7 +40,7 @@ include BASE_PATH.'nic/modules/nicModules.php'; # Load all included modules
 # --------------------------------------------------------------------
 
 if($nicPageType == "module_test") {
-    return $nicModuleOutput_example;
+    print_r($nicModuleOutput_example);
 }
 
 } // try end
