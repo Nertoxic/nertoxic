@@ -52,9 +52,7 @@ if($nicPageType == "module_test") {
 }
 
 if($nicPageType == "setuped") {
-    if($nicConsoleErrorFile == NULL) {
-        include BASE_PATH.'nic/out/default.html';
-    }
+    include BASE_PATH.'nic/out/default.html';
 }
 
 } // try end

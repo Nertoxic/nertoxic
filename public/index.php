@@ -10,5 +10,3 @@
 $nicPageType = "setuped";
 include '../../nicLoader.php';
 ?>
-
-Error while loading setup

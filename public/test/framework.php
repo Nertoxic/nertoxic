@@ -10,5 +10,3 @@
 $nicPageType = "framework_test";
 include '../../nicLoader.php';
 ?>
-
-Error while loading this test page.
