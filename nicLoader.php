@@ -41,7 +41,7 @@ include BASE_PATH.'nic/modules/nicModules.php'; # Load all included modules
 
 if($nicPageType == "module_test") {
     if($nicModuleOutput_example == true) {
-        include BASE_PATH.'nic/core/out/success_module_system.html';
+        include BASE_PATH.'nic/out/success_module_system.html';
     } else {
         $nicConsoleErrorFile = "nicLoader.php";
         $nicConsoleErrorCritical = "true";
