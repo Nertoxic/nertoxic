@@ -8,5 +8,5 @@
 #
 #
 $nicPageType = "setuped";
-include '../../nicLoader.php';
+include '../nicLoader.php';
 ?>
