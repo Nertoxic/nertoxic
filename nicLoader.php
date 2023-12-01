@@ -48,7 +48,7 @@ if($nic_version == NULL) {
     include BASE_PATH.'nic/core/nicConsole.php';
 }
 
-if($mysql == NULL) {
+if($mysql ==! NULL) {
     $nicConsoleErrorFile = "nicLoader.php";
     $nicConsoleErrorCritical = "true";
     $nicConsoleErrorDesc = "The backend couldnt connect to the database correctly, please check your variables";
