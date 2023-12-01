@@ -22,9 +22,9 @@ include BASE_PATH.'nicVersion.php'; # Load NIC Version
 include BASE_PATH.'nic/handler/nicPageNameHandler.php'; # Manage page Namens
 
 // Database loading
-if($NIC_USED_DB == "mysql") {
+
     include BASE_PATH.'nic/database/MySQL/mysqlBuild.php';
-}
+
 
 include BASE_PATH.'nic/modules/nicModules.php'; # Load all included modules
 
