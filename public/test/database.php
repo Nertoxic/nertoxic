@@ -11,11 +11,11 @@ $nicPageType = "x";
 include '../../nicLoader.php';
 ?>
 
+<?= $env['NIC_USED_DB']; ?>
+
 <?php
     $DB_TEST = $mysql->db()->prepare("SELECT * FROM `nicTesting`");
     $DB_TEST->execute();
     while ($testDB = $DB_TEST -> fetch(PDO::FETCH_ASSOC)){
     }
 ?>
-
-<?= $env['NIC_USED_DB']; ?>
