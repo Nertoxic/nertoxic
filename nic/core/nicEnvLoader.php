@@ -21,7 +21,7 @@ if ($env === false) {
     $NIC_ENV_TYPE = $env['NIC_ENV_TYPE'];
     $NIC_BASE_URI = $env['NIC_BASE_URL'];
 
-    $NIC_MYSQL_HOST = $env['NIC_MYSQL_HOST'];
+    $NIC_USED_DB = $env['NIC_USED_DB'];
 
     $NIC_MYSQL_HOST = $env['NIC_MYSQL_HOST'];
     $NIC_MYSQL_DB_NAME = $env['NIC_MYSQL_DB_NAME'];
