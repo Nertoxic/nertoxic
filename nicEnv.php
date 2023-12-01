@@ -15,6 +15,11 @@ if ($env === false) {
     $nicConsoleErrorCritical = "true";
     $nicConsoleErrorDesc = "The .env file couldnt be loaded, please check the file for any errors.";
     include BASE_PATH.'nic/core/nicConsole.php';
+} else {
+    $NIC_MYSQL_HOST = $env['NIC_MYSQL_HOST'];
+    $NIC_MYSQL_DB_NAME = $env['NIC_MYSQL_DB_NAME'];
+    $NIC_MYSQL_USER_NAME = $env['NIC_MYSQL_USER_NAME'];
+    $NIC_MYSQL_USER_PASS = $env['NIC_MYSQL_USER_PASS'];
 }
 
 ?>
