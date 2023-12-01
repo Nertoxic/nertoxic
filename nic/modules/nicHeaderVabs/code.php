@@ -25,5 +25,12 @@ parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH)🡺  /subFolder/myfile.php
 $_SERVER["PHP_SELF"]       🡺                       /subFolder/myfile.php
 */
 
+$httpDocument = $_SERVER["DOCUMENT_ROOT"];
 $httpAddr = $_SERVER['SERVER_ADDR'];
+$httpPort = $_SERVER["SERVER_PORT"];
+$httpScheme = $_SERVER["REQUEST_SCHEME"];
+$httpDomain = $_SERVER['HTTP_HOST'];
+$httpUri = $_SERVER["REQUEST_URI"];
+$httpQuery = $_SERVER['QUERY_STRING'];
+$httpSelf = $_SERVER['PHP_SELF'];
 ?>

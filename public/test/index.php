@@ -11,4 +11,11 @@ $nicPageType = "x";
 include '../../nicLoader.php';
 ?>
 
-<?= $httpAddr; ?>
+<?= $httpDocument = $_SERVER["DOCUMENT_ROOT"]; ?>
+<?= $httpAddr = $_SERVER['SERVER_ADDR']; ?>
+<?= $httpPort = $_SERVER["SERVER_PORT"]; ?>
+<?= $httpScheme = $_SERVER["REQUEST_SCHEME"]; ?>
+<?= $httpDomain = $_SERVER['HTTP_HOST']; ?>
+<?= $httpUri = $_SERVER["REQUEST_URI"]; ?>
+<?= $httpQuery = $_SERVER['QUERY_STRING']; ?>
+<?= $httpSelf = $_SERVER['PHP_SELF']; ?>
