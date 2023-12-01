@@ -15,7 +15,14 @@ if ($env === false) {
     $nicConsoleErrorDesc = "The .env couldnt be loaded, please check it for any errors and check your server console";
     include BASE_PATH.'nic/core/nicConsole.php';
 
-} 
+} elseif($env == NULL) {
+
+    $nicConsoleErrorFile = ".env";
+    $nicConsoleErrorCritical = "true";
+    $nicConsoleErrorDesc = "The .env couldnt be loaded, please check it for any errors and check your server console";
+    include BASE_PATH.'nic/core/nicConsole.php';
+
+} else {
 
     $NIC_LICENSE = $env['NIC_LICENSE'];
     $NIC_ENV_TYPE = $env['NIC_ENV_TYPE'];
@@ -28,5 +35,6 @@ if ($env === false) {
     $NIC_MYSQL_USER_NAME = $env['NIC_MYSQL_USER_NAME'];
     $NIC_MYSQL_USER_PASS = $env['NIC_MYSQL_USER_PASS'];
 
+}
 
 ?>
