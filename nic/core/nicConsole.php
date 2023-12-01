@@ -12,11 +12,11 @@
 
 echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
 echo "<script>console.log('');</script>";
-echo "<script>console.log('File: ".$nicConsoleErrorFile."');</script>";
-echo "<script>console.log('Ciritcal: ".$nicConsoleErrorCritical."');</script>";
+echo "<script>console.error('File: ".$nicConsoleErrorFile."');</script>";
+echo "<script>console.error('Ciritcal: ".$nicConsoleErrorCritical."');</script>";
 echo "<script>console.error('Error: ".$nicConsoleErrorDesc."');</script>";
 echo "<script>console.log('');</script>";
-echo "<script>console.debug('--------------------- [NERTOXIC] ---------------------');</script>";
+echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
 
 if($nicConsoleErrorCritical == "true") {
     include BASE_PATH.'nic/out/error.html';
