@@ -35,12 +35,10 @@ include BASE_PATH.'nic/modules/nicModules.php'; # Load all included modules
 # --------------------------------------------------------------------
 
 catch (Exception $e) {
-
     $nicConsoleErrorFile = "nicLoader.php";
     $nicConsoleErrorCritical = "true";
     $nicConsoleErrorDesc = "The loader couldnt be loaded, this means the backend currently cant build up. Please check last edited files and check the php log";
     include BASE_PATH.'nic/core/nicConsole.php';
-
 }
 
 if($nic_version == NULL) {

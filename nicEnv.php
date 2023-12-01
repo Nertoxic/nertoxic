@@ -9,6 +9,12 @@
 #
 
 $env = parse_ini_file('.env');
-#include BASE_PATH.'nic/core/nicEnvLoader.php';
+
+if ($env === false) {
+    $nicConsoleErrorFile = "nicEnv.php";
+    $nicConsoleErrorCritical = "true";
+    $nicConsoleErrorDesc = "The .env file couldnt be loaded, please check the file for any errors.";
+    include BASE_PATH.'nic/core/nicConsole.php';
+}
 
 ?>
