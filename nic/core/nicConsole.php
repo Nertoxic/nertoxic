@@ -10,17 +10,29 @@
 
 // console.warn/log/error/debug
 
-echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
-echo "<script>console.log('');</script>";
-echo "<script>console.log('File: ".$nicConsoleErrorFile."');</script>";
-echo "<script>console.log('Ciritcal: ".$nicConsoleErrorCritical."');</script>";
-echo "<script>console.error('Error: ".$nicConsoleErrorDesc."');</script>";
-echo "<script>console.log('');</script>";
-echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
-
 if($nicConsoleErrorCritical == "true") {
+
+    echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
+    echo "<script>console.log('');</script>";
+    echo "<script>console.log('File: ".$nicConsoleErrorFile."');</script>";
+    echo "<script>console.log('Ciritcal: ".$nicConsoleErrorCritical."');</script>";
+    echo "<script>console.error('Error: ".$nicConsoleErrorDesc."');</script>";
+    echo "<script>console.log('');</script>";
+    echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
+
     include BASE_PATH.'nic/out/error.html';
     die();
+
+} else {
+
+    echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
+    echo "<script>console.log('');</script>";
+    echo "<script>console.log('File: ".$nicConsoleErrorFile."');</script>";
+    echo "<script>console.log('Ciritcal: ".$nicConsoleErrorCritical."');</script>";
+    echo "<script>console.warn('Error: ".$nicConsoleErrorDesc."');</script>";
+    echo "<script>console.log('');</script>";
+    echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
+    
 }
 
 ?>
