@@ -8,7 +8,7 @@
 #
 #
 
-if ($env == false) {
+if ($env === false) {
 
     $nicConsoleErrorFile = ".env";
     $nicConsoleErrorCritical = "true";
