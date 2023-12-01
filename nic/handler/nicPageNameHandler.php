@@ -9,7 +9,7 @@
 #
 
 # --------------------------------------------------------------------
-# Module Testing Page
+# Internal page types
 # --------------------------------------------------------------------
 
 if($nicPageType == "module_test") {
@@ -23,17 +23,9 @@ if($nicPageType == "module_test") {
     }
 }
 
-# --------------------------------------------------------------------
-# Finished setupe index
-# --------------------------------------------------------------------
-
 if($nicPageType == "setuped") {
     include BASE_PATH.'nic/out/default.html';
 }
-
-# --------------------------------------------------------------------
-# Framework Testing Page
-# --------------------------------------------------------------------
 
 if($nicPageType == "framework_test") {
     if($nicConsoleErrorFile == NULL) {

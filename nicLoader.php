@@ -14,24 +14,17 @@ $nicConsoleErrorFile = 0;
 try {
 
 # --------------------------------------------------------------------
-# These files are core files, without them the framework wouldnt work
+# Include files
 #--------------------------------------------------------------------
 
 include BASE_PATH.'nicEnv.php'; # Load Env variables
 include BASE_PATH.'nicVersion.php'; # Load NIC Version
 include BASE_PATH.'nic/handler/nicPageNameHandler.php'; # Manage page Namens
 
-# --------------------------------------------------------------------
-# These files are basic files which adding some cool features to the framework
-# --------------------------------------------------------------------
-
+// Database loading
 if($NIC_MYSQL_HOST == "mysql") {
     include BASE_PATH.'nic/database/MySQL/mysqlBuild.php';
 }
-
-# --------------------------------------------------------------------
-# Load modules now
-# --------------------------------------------------------------------
 
 include BASE_PATH.'nic/modules/nicModules.php'; # Load all included modules
 
