@@ -17,3 +17,5 @@ include '../../nicLoader.php';
     while ($testDB = $DB_TEST -> fetch(PDO::FETCH_ASSOC)){
     }
 ?>
+
+<?= $NIC_USED_DB; ?>
