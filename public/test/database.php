@@ -18,4 +18,4 @@ include '../../nicLoader.php';
     }
 ?>
 
-<?= $env; ?>
+<?= $env['NIC_USED_DB']; ?>
