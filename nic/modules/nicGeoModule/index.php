@@ -9,14 +9,14 @@
 #
 
 # --------------------------------------------------------------------
-# Module: nicHeaderVabs
+# Module: nicGeoModule
 # Creator: Nertoxic
-# Desc: All the $_SERVER Strings will be made to easier variables
+# Desc: This module will get the geoLocation of the current visitor
 # --------------------------------------------------------------------
 
-$moduleIsActive = true;
+$moduleIsActive = false;
 
 if($moduleIsActive == true) {
-    include BASE_PATH.'nic/modules/nicHeaderVabs/code.php';
+    include BASE_PATH.'nic/modules/nicGeoModule/code.php';
 }
 ?>
