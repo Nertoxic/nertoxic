@@ -18,4 +18,4 @@ include '../../nicLoader.php';
     }
 ?>
 
-<?= $NIC_LICENSE; ?>
+<?= $env; ?>
