@@ -11,10 +11,7 @@
 $env = parse_ini_file('.env');
 
 if ($env === false) {
-    $nicConsoleErrorFile = "nicEnv.php";
-    $nicConsoleErrorCritical = "true";
-    $nicConsoleErrorDesc = "The .env file couldnt be loaded, please check the file for any errors.";
-    include BASE_PATH.'nic/core/nicConsole.php';
+    $nicCon->callError(true, 'nicEnv.php', 'The .env file couldnt be loaded, please check the file for any errors.');
 } else {
     // Basic env Variables that need to be global available
     $NIC_BASE_URL = $env['NIC_BASE_URL'];

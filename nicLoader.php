@@ -39,23 +39,14 @@ include BASE_PATH.'nic/core/nicFunctions.php'; # Load the Security functions
 # --------------------------------------------------------------------
 
 catch (Exception $e) {
-    $nicConsoleErrorFile = "nicLoader.php";
-    $nicConsoleErrorCritical = "true";
-    $nicConsoleErrorDesc = "The loader couldnt be loaded, this means the backend currently cant build up. Please check last edited files and check the php log";
-    include BASE_PATH.'nic/core/nicConsole.php';
+    $nicCon->callError(true, 'nicLoader.php', 'The loader couldnt be loaded, this means the backend currently cant build up. Please check last edited files and check the php log');
 }
 
 if($nic_version == NULL) {
-    $nicConsoleErrorFile = "nicVerion.php";
-    $nicConsoleErrorCritical = "true";
-    $nicConsoleErrorDesc = "The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.";
-    include BASE_PATH.'nic/core/nicConsole.php';
+    $nicCon->callError(true, 'nicVerion.php', 'The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.');
 }
 
 if($mysql == NULL) {
-    $nicConsoleErrorFile = "nicLoader.php";
-    $nicConsoleErrorCritical = "true";
-    $nicConsoleErrorDesc = "The backend couldnt connect to the database correctly, please check your variables";
-    include BASE_PATH.'nic/core/nicConsole.php';
+    $nicCon->callError(true, 'nicLoader.php', 'The backend couldnt connect to the database correctly, please check your variables');
 }
 ?>

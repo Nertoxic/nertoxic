@@ -36,7 +36,7 @@ class nicCon
             echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
 
         }
-        
+
     }
 
 }
