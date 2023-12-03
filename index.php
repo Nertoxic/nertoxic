@@ -9,5 +9,5 @@
 #
 
 include 'nicLoader.php';
-$nicCon->callError(true, 'index.php', 'The Base_path didnt has been setuped right: https://flakes-1.gitbook.io/nertoxic/#setup-the-base_path')
+$nicCon->callError(false, 'index.php', 'The Base_path didnt has been setuped right: https://flakes-1.gitbook.io/nertoxic/#setup-the-base_path')
 ?>
