@@ -32,3 +32,9 @@ if($nicPageType == "framework_test") {
         include BASE_PATH.'nic/out/success_framework.html';
     }
 }
+
+if($nicPageType == "database_test") {
+    if($mysql ==! NULL) {
+        include BASE_PATH.'nic/out/success_database.html';
+    }
+}

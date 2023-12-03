@@ -8,9 +8,6 @@
 #
 #
 
-$nicConsoleErrorFile = "index.php";
-$nicConsoleErrorCritical = "true";
-$nicConsoleErrorDesc = "You need to set the entry point for your webhosting to the /public/ folder";
 include 'nicLoader.php';
-include BASE_PATH.'nic/core/nicConsole.php';
+$nicCon->callError(true, 'index.php', 'The Base_path didnt has been setuped right: https://flakes-1.gitbook.io/nertoxic/#setup-the-base_path')
 ?>

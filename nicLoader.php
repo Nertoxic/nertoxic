@@ -19,6 +19,8 @@ try {
 
 include BASE_PATH.'nicEnv.php'; # Load Env variables
 include BASE_PATH.'nicVersion.php'; # Load NIC Version
+include BASE_PATH.'nic/core/nicConsole.php'; # Load the Console
+
 include BASE_PATH.'nic/handler/nicPageNameHandler.php'; # Manage page Namens
 
 // Database loading
@@ -27,6 +29,8 @@ if($env['NIC_USED_DB'] == "mysql") {
 }
 
 include BASE_PATH.'nic/modules/nicModules.php'; # Load all included modules
+include BASE_PATH.'nic/security/nicSecurity.php'; # Load the Security functions
+include BASE_PATH.'nic/core/nicFunctions.php'; # Load the Security functions
 
 } // try end
 

@@ -16,6 +16,10 @@ if ($env === false) {
     $nicConsoleErrorDesc = "The .env file couldnt be loaded, please check the file for any errors.";
     include BASE_PATH.'nic/core/nicConsole.php';
 } else {
+    // Basic env Variables that need to be global available
+    $NIC_BASE_URL = $env['NIC_BASE_URL'];
+
+    // Database Variables that need to be global available
     $NIC_MYSQL_HOST = $env['NIC_MYSQL_HOST'];
     $NIC_MYSQL_DB_NAME = $env['NIC_MYSQL_DB_NAME'];
     $NIC_MYSQL_USER_NAME = $env['NIC_MYSQL_USER_NAME'];
