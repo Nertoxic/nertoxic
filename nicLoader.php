@@ -17,8 +17,8 @@ try {
 # Include files
 #--------------------------------------------------------------------
 
-include BASE_PATH.'nicEnv.php'; # Load Env variables
-include BASE_PATH.'nicVersion.php'; # Load NIC Version
+require BASE_PATH.'nicEnv.php'; # Load Env variables
+require BASE_PATH.'nicVersion.php'; # Load NIC Version
 include BASE_PATH.'nic/core/nicConsole.php'; # Load the Console
 
 include BASE_PATH.'nic/handler/nicPageNameHandler.php'; # Manage page Namens
