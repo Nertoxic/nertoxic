@@ -15,5 +15,7 @@ foreach (glob(BASE_PATH.'nic/modules/*/index.php') as $filename)
     }
 }
 
+echo("D");
+
 
 ?>
