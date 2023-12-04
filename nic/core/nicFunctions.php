@@ -29,4 +29,10 @@ class nicFun
         return $licenseKey;
     }
 
+    public function checkLicense()
+    {
+        $licenseKey = $GLOBALS['NIC_LICENSE'];
+        return true;
+    }
+
 }
