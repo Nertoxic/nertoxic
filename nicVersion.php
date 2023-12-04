@@ -8,6 +8,6 @@
 #
 #
 
-$nic_version = "1.0.0"; # Editing this may couse a not fixable system error
+$nic_version = "1.0.0"; // Editing this may couse a unfixable system error
 
 ?>
