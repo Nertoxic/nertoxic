@@ -8,7 +8,7 @@
 #
 #
 
-foreach (glob(BASE_PATH.'nic/modules/*/index.php') as $filename)
+foreach (glob(MODULE_PATH.'*/index.php') as $filename)
 {
     if($filename != 'nicModules.php'){
         include_once $filename;
