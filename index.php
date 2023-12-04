@@ -10,4 +10,5 @@
 
 include 'nicLoader.php';
 $nicCon->callError(true, 'index.php', 'The Base_path didnt has been setuped right, please check if the default path has been set to /public/')
+
 ?>
