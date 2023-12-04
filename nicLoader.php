@@ -24,6 +24,7 @@ define('DB_PATH', __DIR__.'/nic/database/');
 # --------------------------------------------------------------------
 # Include files
 #--------------------------------------------------------------------
+try {
 
 require BASE_PATH.'nicEnv.php'; # Load Env variables
 require BASE_PATH.'nicVersion.php'; # Load NIC Version
@@ -36,9 +37,13 @@ if($env['NIC_USED_DB'] == "mysql") {
     require DB_PATH.'MySQL/mysqlBuild.php';
 }
 
-require MODULE_PATH.'nicModules.php'; # Load all included modules
+include MODULE_PATH.'nicModules.php'; # Load all included modules
 require SECURITY_PATH.'nicSecurity.php'; # Load the Security functions
 require CORE_PATH.'nicFunctions.php'; # Load the Security functions
+
+} catch (Exception $e) {
+    $nicCon->callError(true, 'nicLoader.php', 'There was an error while loading the loader.');
+}
 
 # --------------------------------------------------------------------
 # Error handling
