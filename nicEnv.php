@@ -14,6 +14,9 @@ if ($env === false) {
     $nicCon->callError(true, 'nicEnv.php', 'The .env file couldnt be loaded, please check the file for any errors.');
 } else {
     // Basic env Variables that need to be global available
+    $APP_NAME = $env['APP_NAME'];
+    $APP_LOGO = $env['APP_LOGO'];
+    
     $NIC_BASE_URL = $env['NIC_BASE_URL'];
 
     // Database Variables that need to be global available

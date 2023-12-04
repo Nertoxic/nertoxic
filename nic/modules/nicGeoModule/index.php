@@ -17,6 +17,6 @@
 $moduleIsActive = false;
 
 if($moduleIsActive == true) {
-    include BASE_PATH.'nic/modules/nicGeoModule/code.php';
+    include MODULE_PATH.'nicGeoModule/code.php';
 }
 ?>

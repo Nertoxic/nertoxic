@@ -9,14 +9,14 @@
 #
 
 # --------------------------------------------------------------------
-# Module: nicHeaderVabs
+# Module: nicDiscord
 # Creator: Nertoxic
-# Desc: All the $_SERVER Strings will be made to easier variables
+# Desc: This module will add a function to call a webhook
 # --------------------------------------------------------------------
 
-$moduleIsActive = true;
+$moduleIsActive = false;
 
 if($moduleIsActive == true) {
-    include MODULE_PATH.'nicHeaderVabs/code.php';
+    include MODULE_PATH.'nicDiscord/code.php';
 }
 ?>
