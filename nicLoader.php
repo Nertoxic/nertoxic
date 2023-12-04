@@ -30,8 +30,6 @@ require BASE_PATH.'nicEnv.php'; # Load Env variables
 require BASE_PATH.'nicVersion.php'; # Load NIC Version
 require CORE_PATH.'nicConsole.php'; # Load the Console
 
-require HANDLER_PATH.'nicPageNameHandler.php'; # Manage page Namens
-
 // Database loading
 if($env['NIC_USED_DB'] == "mysql") {
     require DB_PATH.'MySQL/mysqlBuild.php';
@@ -40,6 +38,8 @@ if($env['NIC_USED_DB'] == "mysql") {
 require MODULE_PATH.'nicModules.php'; # Load all included modules
 require SECURITY_PATH.'nicSecurity.php'; # Load the Security functions
 require CORE_PATH.'nicFunctions.php'; # Load the Security functions
+
+require HANDLER_PATH.'nicPageNameHandler.php'; # Manage page Namens
 
 } catch (Exception $e) {
     $nicCon->callError(true, 'nicLoader.php', 'There was an error while loading the loader.');

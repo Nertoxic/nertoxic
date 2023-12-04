@@ -15,7 +15,4 @@ foreach (glob(MODULE_PATH.'*/index.php') as $filename)
     }
 }
 
-echo("Modules loaded");
-
-
 ?>
