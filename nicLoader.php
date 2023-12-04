@@ -13,7 +13,7 @@
 #--------------------------------------------------------------------
 
 $nicConsoleErrorFile = 0;
-$neededPHPVersion = '8.2';
+$neededPHPVersion = '8.3';
 
 define('BASE_PATH', __DIR__.'/');
 define('CORE_PATH', __DIR__.'/nic/core/');
