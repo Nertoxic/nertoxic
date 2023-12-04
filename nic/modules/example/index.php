@@ -9,5 +9,6 @@
 
 
 $nicModuleOutput_example = true;
+echo("Test module loaded");
 
 ?>
