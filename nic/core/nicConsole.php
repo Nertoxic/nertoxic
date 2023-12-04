@@ -22,7 +22,7 @@ class nicCon
             echo "<script>console.log('');</script>";
             echo "<script>console.log('--------------------- [NERTOXIC] ---------------------');</script>";
         
-            include BASE_PATH.'nic/out/error.html';
+            include OUT_PATH.'error.html';
             die();
 
         } else {

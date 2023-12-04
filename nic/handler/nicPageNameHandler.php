@@ -14,24 +14,24 @@
 
 if($nicPageType == "module_test") {
     if($nicModuleOutput_example == true) {
-        include BASE_PATH.'nic/out/success_module_system.html';
+        include OUT_PATH.'success_module_system.html';
     } else {
         $nicCon->callError(true, 'nicLoader.php', 'The module System isnt working, please check the folder /nic/modules/*');
     }
 }
 
 if($nicPageType == "setuped") {
-    include BASE_PATH.'nic/out/default.html';
+    include OUT_PATH.'default.html';
 }
 
 if($nicPageType == "framework_test") {
     if($nicConsoleErrorFile == NULL) {
-        include BASE_PATH.'nic/out/success_framework.html';
+        include OUT_PATH.'success_framework.html';
     }
 }
 
 if($nicPageType == "database_test") {
     if($mysql ==! NULL) {
-        include BASE_PATH.'nic/out/success_database.html';
+        include OUT_PATH.'success_database.html';
     }
 }
