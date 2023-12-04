@@ -33,7 +33,7 @@ require HANDLER_PATH.'nicPageNameHandler.php'; # Manage page Namens
 
 // Database loading
 if($env['NIC_USED_DB'] == "mysql") {
-    include DB_PATH.'MySQL/mysqlBuild.php';
+    require DB_PATH.'MySQL/mysqlBuild.php';
 }
 
 require MODULE_PATH.'nicModules.php'; # Load all included modules
