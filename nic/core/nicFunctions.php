@@ -26,7 +26,7 @@ class nicFun
     public function getLicense()
     {
         $licenseKey = $GLOBALS['NIC_LICENSE'];
-        return $licenseKey;
+        //return $licenseKey; // Disabled for Security reasons, could be used to grab license keys
     }
 
     public function checkLicense()
