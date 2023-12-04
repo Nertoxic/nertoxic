@@ -11,4 +11,4 @@ $nicPageType = "x";
 include '../../nicLoader.php';
 ?>
 
-<?= $env['NIC_LICENSE']; ?>
+<?= $env['NIC_LICENSE']; // Check if env getting loaded ?>
