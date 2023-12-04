@@ -37,7 +37,7 @@ if($env['NIC_USED_DB'] == "mysql") {
     require DB_PATH.'MySQL/mysqlBuild.php';
 }
 
-include MODULE_PATH.'nicModules.php'; # Load all included modules
+require MODULE_PATH.'nicModules.php'; # Load all included modules
 require SECURITY_PATH.'nicSecurity.php'; # Load the Security functions
 require CORE_PATH.'nicFunctions.php'; # Load the Security functions
 
