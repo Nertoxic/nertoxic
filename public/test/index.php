@@ -12,3 +12,5 @@ include '../../nicLoader.php';
 ?>
 
 <?= $env['NIC_LICENSE']; // Check if env getting loaded ?>
+<br>
+<?php echo 'Current PHP version: ' . phpversion(); // Get the current used php version ?>
