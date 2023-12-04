@@ -8,10 +8,18 @@
 #
 #
 
-define('BASE_PATH', __DIR__.'/');
+# --------------------------------------------------------------------
+# Setup path and default variables
+#--------------------------------------------------------------------
+
 $nicConsoleErrorFile = 0;
 
-try {
+define('BASE_PATH', __DIR__.'/');
+define('CORE_PATH', __DIR__.'/nic/core/');
+define('MODULE_PATH', __DIR__.'/nic/modules/');
+define('SECURITY_PATH', __DIR__.'/nic/security/');
+define('HANDLER_PATH', __DIR__.'/nic/handler/');
+define('DB_PATH', __DIR__.'/nic/database/');
 
 # --------------------------------------------------------------------
 # Include files
@@ -19,27 +27,25 @@ try {
 
 require BASE_PATH.'nicEnv.php'; # Load Env variables
 require BASE_PATH.'nicVersion.php'; # Load NIC Version
-include BASE_PATH.'nic/core/nicConsole.php'; # Load the Console
+require CORE_PATH.'nicConsole.php'; # Load the Console
 
-include BASE_PATH.'nic/handler/nicPageNameHandler.php'; # Manage page Namens
+require HANDLER_PATH.'nicPageNameHandler.php'; # Manage page Namens
 
 // Database loading
 if($env['NIC_USED_DB'] == "mysql") {
-    include BASE_PATH.'nic/database/MySQL/mysqlBuild.php';
+    include DB_PATH.'MySQL/mysqlBuild.php';
 }
 
-include BASE_PATH.'nic/modules/nicModules.php'; # Load all included modules
-include BASE_PATH.'nic/security/nicSecurity.php'; # Load the Security functions
-include BASE_PATH.'nic/core/nicFunctions.php'; # Load the Security functions
-
-} // try end
+require MODULE_PATH.'nicModules.php'; # Load all included modules
+require SECURITY_PATH.'nicSecurity.php'; # Load the Security functions
+require CORE_PATH.'nicFunctions.php'; # Load the Security functions
 
 # --------------------------------------------------------------------
 # Error handling
 # --------------------------------------------------------------------
 
-catch (Exception $e) {
-    $nicCon->callError(true, 'nicLoader.php', 'The loader couldnt be loaded, this means the backend currently cant build up. Please check last edited files and check the php log');
+if($env['NIC_USED_DB'] == NULL) {
+    $nicCon->callError(true, 'nicLoader.php', 'The database type couldnt be loaded, check if the right value has been set inside the .env file.');
 }
 
 if($nic_version == NULL) {
