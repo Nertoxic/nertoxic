@@ -68,4 +68,17 @@ class nicFun
         return $randomString;
     }
 
+    /*
+     * spaceToBr
+     *
+     * This function will make any empty line (within
+     * the given string) into a html <br>
+     */
+    public function spaceToBr($string)
+    {
+        $string = $nicSec->xss($string); // This will call the security function to save the string for xss attacks
+        $string = str_replace(array("\r\n", "\r", "\n"), "<br />", $string);
+        return $string;
+    }
+
 }
