@@ -18,6 +18,7 @@ if ($env === false) {
     $APP_LOGO = $env['APP_LOGO'];
     
     $NIC_BASE_URL = $env['NIC_BASE_URL'];
+    $NIC_LICENSE = $env['NIC_LICENSE'];
 
     // Database Variables that need to be global available
     $NIC_MYSQL_HOST = $env['NIC_MYSQL_HOST'];

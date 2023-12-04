@@ -17,4 +17,16 @@ class nicFun
         return $baseURL;
     }
 
+    /*
+     * getLicense
+     *
+     * Return the License of the Nic Framework, can be 
+     * used for paid modules or paid code
+     */
+    public function getLicense()
+    {
+        $licenseKey = $GLOBALS['NIC_LICENSE'];
+        return $licenseKey;
+    }
+
 }
