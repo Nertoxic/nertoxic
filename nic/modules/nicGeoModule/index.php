@@ -10,7 +10,7 @@
 
 # --------------------------------------------------------------------
 # Module: nicGeoModule
-# Creator: Nertoxic
+# Creator: Nertoxic (DevelopingFlakes)
 # Desc: This module will get the geoLocation of the current visitor
 # --------------------------------------------------------------------
 

@@ -10,7 +10,7 @@
 
 # --------------------------------------------------------------------
 # Module: nicHeaderVabs
-# Creator: Nertoxic
+# Creator: Nertoxic (DevelopingFlakes)
 # Desc: All the $_SERVER Strings will be made to easier variables
 # --------------------------------------------------------------------
 

@@ -10,7 +10,7 @@
 
 # --------------------------------------------------------------------
 # Module: nicDiscord
-# Creator: Nertoxic
+# Creator: Nertoxic (DevelopingFlakes)
 # Desc: This module will add a function to call a webhook
 # --------------------------------------------------------------------
 
