@@ -81,4 +81,16 @@ class nicFun
         return $string;
     }
 
+    /*
+     * formatDateTo_dmy_hi
+     *
+     * Format a date inside the given string into
+     * d.m.y H:i
+     */
+    public function formatDateDefault($date)
+    {
+        $date = new DateTime($date, new DateTimeZone('Europe/Berlin'));
+        return $date->format('d.m.Y H:i');
+    }
+
 }

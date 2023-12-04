@@ -13,6 +13,7 @@
 #--------------------------------------------------------------------
 
 $nicConsoleErrorFile = 0;
+$neededPHPVersion = '8.2';
 
 define('BASE_PATH', __DIR__.'/');
 define('CORE_PATH', __DIR__.'/nic/core/');
@@ -49,6 +50,11 @@ require HANDLER_PATH.'nicPageNameHandler.php'; # Manage page Namens
 # --------------------------------------------------------------------
 # Error handling
 # --------------------------------------------------------------------
+
+if (version_compare(PHP_VERSION, $neededPHPVersion, '<')) 
+{
+    $nicCon->callError(true, 'nicLoader.php', 'The Nertoxic Framework couldnt be loaded, you need at least the PHP Version '.$neededPHPVersion);
+}
 
 if($env['NIC_USED_DB'] == NULL) {
     $nicCon->callError(true, 'nicLoader.php', 'The database type couldnt be loaded, check if the right value has been set inside the .env file.');
