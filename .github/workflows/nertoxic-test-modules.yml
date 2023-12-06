@@ -4,10 +4,12 @@ on:
   push:
     paths:
       - '**.php'
+      - .env
 
   pull_request:
     paths:
       - '**.php'
+      - .env
     
 permissions:
     contents: read
