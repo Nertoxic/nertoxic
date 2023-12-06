@@ -46,7 +46,7 @@ public function sendMail($mailTo, $mailTitle, $mailContent)
     $mail->CharSet   = 'UTF-8';
     $mail->Encoding  = 'base64';
     $mail->Subject = $mailTitle;
-    $mail->Body    = $$mailContent;
+    $mail->Body    = $mailContent;
     $mail->AltBody = 'Error while creating the mail content.';
 
     $mail->send();
