@@ -2,9 +2,11 @@ name: Composer Check
 
 on:
   push:
-    branches: [ "main" ]
+    paths:
+      - composer.json
   pull_request:
-    branches: [ "main" ]
+    paths:
+      - composer.json
 
 permissions:
   contents: read
