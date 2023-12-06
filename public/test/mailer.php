@@ -7,7 +7,7 @@
 # |_| \_|_____|_| \_\|_| \___/_/\_\___\____|
 #
 #
-$nicPageType = "x";
+$nicPageType = "mailer_test";
 include '../../nicLoader.php';
 ?>
 

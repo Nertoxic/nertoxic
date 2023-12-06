@@ -35,3 +35,9 @@ if($nicPageType == "database_test") {
         include OUT_PATH.'success_database.html';
     }
 }
+
+if($nicPageType == "mailer_test") {
+    if($nicMail ==! NULL) {
+        include OUT_PATH.'success_database.html';
+    }
+}
