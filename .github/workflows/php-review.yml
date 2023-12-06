@@ -37,4 +37,5 @@ jobs:
           run: composer update
 
         - name: Run framework test
-          run: php /public/index.php
+          working-directory: public/
+          run: php index.php
