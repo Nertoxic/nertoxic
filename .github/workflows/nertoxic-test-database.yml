@@ -2,10 +2,12 @@ name: Nertoxic Database Test
 
 on:
     push:
-      branches: [ "main" ]
+      paths:
+        - '**.php'
 
     pull_request:
-      branches: [ "main" ]
+      paths:
+        - '**.php'
     
 permissions:
     contents: read

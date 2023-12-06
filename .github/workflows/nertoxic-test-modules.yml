@@ -1,11 +1,13 @@
 name: Nertoxic Module Test
 
 on:
-    push:
-      branches: [ "main" ]
+  push:
+    paths:
+      - '**.php'
 
-    pull_request:
-      branches: [ "main" ]
+  pull_request:
+    paths:
+      - '**.php'
     
 permissions:
     contents: read
