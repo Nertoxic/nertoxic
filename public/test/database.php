@@ -16,7 +16,7 @@ include '../../nicLoader.php';
     $DB_TEST->execute();
     while ($testDB = $DB_TEST -> fetch(PDO::FETCH_ASSOC)){
 
-        $testDB['lineContent']; // This will output the current content of the line specified inside the '' tag
+        echo($testDB['lineContent']); // This will output the current content of the line specified inside the '' tag
 
     }
 ?>
