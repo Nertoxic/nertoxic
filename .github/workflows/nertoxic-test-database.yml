@@ -1,4 +1,4 @@
-name: Nertoxic Database Test
+name: Nertoxic Framework Test
 
 on:
     push:
@@ -16,7 +16,7 @@ permissions:
 
 jobs:
     code-review:
-        name: Database Test by Nertoxic
+        name: Framework Test by Nertoxic
         runs-on: ubuntu-latest
 
         steps:
@@ -34,6 +34,18 @@ jobs:
         - name: Composer installation
           run: composer update
 
-        - name: Run framework test
+        - name: Run Database test
           working-directory: public/test
           run: php database.php
+
+        - name: Run Framework test
+          working-directory: public/test
+          run: php framework.php
+
+        - name: Run Mailer test
+          working-directory: public/test
+          run: php mailer.php
+          
+        - name: Run Modules test
+          working-directory: public/test
+          run: php modules.php
