@@ -11,4 +11,4 @@ $nicPageType = "x";
 include '../../nicLoader.php';
 ?>
 
-<?php // nothing yet ?>
+<?php $nicMail->sendMail('mail@nertoxic.com', 'Hey', 'This is a test mail to you'); ?>
