@@ -25,6 +25,12 @@ if ($env === false) {
     $NIC_MYSQL_DB_NAME = $env['NIC_MYSQL_DB_NAME'];
     $NIC_MYSQL_USER_NAME = $env['NIC_MYSQL_USER_NAME'];
     $NIC_MYSQL_USER_PASS = $env['NIC_MYSQL_USER_PASS'];
+
+    // Mailing Variables that need to be global available
+    $NIC_MS_URL = $env['NIC_MS_URL'];
+    $NIC_MS_SENDER = $env['NIC_MS_SENDER'];
+    $NIC_MS_PASSWORD = $env['NIC_MS_PASSWORD'];
+    $NIC_MS_PORT = $env['NIC_MS_PORT'];
 }
 
 ?>
