@@ -1,0 +1,7 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "phpmailer/phpmailer": "^6.1",
+		"symfony/options-resolver": "^3.4"
+    }
+}
