@@ -1,4 +1,4 @@
-name: PHP Review
+name: Nertoxic Database Test
 
 on:
     push:
@@ -12,7 +12,7 @@ permissions:
 
 jobs:
     code-review:
-        name: Automatic Code Review by Nertoxic
+        name: Database Test by Nertoxic
         runs-on: ubuntu-latest
 
         steps:
@@ -31,5 +31,5 @@ jobs:
           run: composer update
 
         - name: Run framework test
-          working-directory: public/
-          run: php index.php
+          working-directory: public/test
+          run: php database.php

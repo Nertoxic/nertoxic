@@ -1,4 +1,4 @@
-name: PHP Review
+name: Nertoxic Framework Test
 
 on:
     push:
@@ -12,7 +12,7 @@ permissions:
 
 jobs:
     code-review:
-        name: Automatic Code Review by Nertoxic
+        name: Module Test by Nertoxic
         runs-on: ubuntu-latest
 
         steps:
@@ -30,6 +30,6 @@ jobs:
         - name: Composer installation
           run: composer update
 
-        - name: Run framework test
-          working-directory: public/
-          run: php index.php
+        - name: Run Framework test
+          working-directory: public/test
+          run: php framework.php
