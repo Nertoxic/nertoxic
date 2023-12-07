@@ -47,7 +47,7 @@ curl_close($curl);
                     </h1>
 
                     <div class="ml-4 text-lg text-gray-500 uppercase tracking-wider">
-                        <?= $nic_version; ?>
+                        Version: <?= $nic_version; ?>
                     </div>
                 </div>
                 <hr>
