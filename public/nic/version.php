@@ -65,8 +65,6 @@ curl_close($curl);
                             To the Website Admin: You should update the framework to be secured against newest security breaches or issues
                             <br><br>
                             Newest Version: <?= $resp; ?>
-                            <br>
-                            Your Version: <?= $nic_version; ?>
                         </small>
                     </small>
                 <?php } ?>
