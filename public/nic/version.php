@@ -61,7 +61,13 @@ curl_close($curl);
                     <small class="px-4 text-lg text-gray-500 border-gray-400 align-center">
                         This website isnt using the latest Nertoxic Version 💔
                         <br>
-                        <small>To the Website Admin: You should update the framework to be secured against newest security breaches or issues</small>
+                        <small>
+                            To the Website Admin: You should update the framework to be secured against newest security breaches or issues
+                            <br><br>
+                            Newest Version: <?= $resp; ?>
+                            <br>
+                            Your Version: <?= $nic_version; ?>
+                        </small>
                     </small>
                 <?php } ?>
 

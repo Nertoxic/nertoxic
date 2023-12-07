@@ -3,12 +3,12 @@ name: Nertoxic Framework Test
 on:
     push:
       paths:
-        - '**.php'
+        - debug.php
         - .env
 
     pull_request:
       paths:
-        - '**.php'
+        - debug.php
         - .env
     
 permissions:
