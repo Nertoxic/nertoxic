@@ -65,6 +65,8 @@ curl_close($curl);
                             To the Website Admin: You should update the framework to be secured against newest security breaches or issues
                             <br><br>
                             Newest Version: <?= $resp; ?>
+                            <br>
+                            <a href="https://docs.nertoxic.com/update" target="_blank">How to Update Nertoxic</a>
                         </small>
                     </small>
                 <?php } ?>
