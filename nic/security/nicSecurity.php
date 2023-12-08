@@ -1,8 +1,8 @@
 <?php
 
-$nicSec = new nicSec();
+$secure = new secure();
 
-class nicSec
+class secure
 
 {
 
