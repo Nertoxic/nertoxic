@@ -1,8 +1,8 @@
 <?php
 
-$nicFun = new nicFun();
+$base = new base();
 
-class nicFun
+class base
 
 {
 

@@ -16,7 +16,7 @@ if($nicPageType == "module_test") {
     if($nicModuleOutput_example == true) {
         include OUT_PATH.'success_module_system.html';
     } else {
-        $nicCon->callError(true, 'nicLoader.php', 'The module System isnt working, please check the folder /nic/modules/*');
+        $console->callError(true, 'nicLoader.php', 'The module System isnt working, please check the folder /nic/modules/*');
     }
 }
 

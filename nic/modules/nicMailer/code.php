@@ -8,7 +8,7 @@
 #
 #
 
-$nicMail = new nicMail();
+$mailer = new mailer();
 
 require BASE_PATH.'vendor/autoload.php';
 
@@ -16,7 +16,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-class nicMail
+class mailer
 {
 
 public function sendMail($mailTo, $mailTitle, $mailContent)

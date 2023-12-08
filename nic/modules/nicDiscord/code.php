@@ -8,9 +8,9 @@
 #
 #
 
-$nicDis = new nicDis();
+$discord = new discord();
 
-class nicDis
+class discord
 
 {
 

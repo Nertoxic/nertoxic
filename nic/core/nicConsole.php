@@ -1,8 +1,8 @@
 <?php
 
-$nicCon = new nicCon();
+$console = new console();
 
-class nicCon
+class console
 
 {
 

@@ -53,18 +53,18 @@ require HANDLER_PATH.'nicPageNameHandler.php'; # Manage page Namens
 
 if (version_compare(PHP_VERSION, $neededPHPVersion, '<')) 
 {
-    $nicCon->callError(true, 'nicLoader.php', 'The Nertoxic Framework couldnt be loaded, you need at least the PHP Version '.$neededPHPVersion);
+    $console->callError(true, 'nicLoader.php', 'The Nertoxic Framework couldnt be loaded, you need at least the PHP Version '.$neededPHPVersion);
 }
 
 if($env['NIC_USED_DB'] == NULL) {
-    $nicCon->callError(true, 'nicLoader.php', 'The database type couldnt be loaded, check if the right value has been set inside the .env file.');
+    $console->callError(true, 'nicLoader.php', 'The database type couldnt be loaded, check if the right value has been set inside the .env file.');
 }
 
 if($nic_version == NULL) {
-    $nicCon->callError(true, 'nicVerion.php', 'The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.');
+    $console->callError(true, 'nicVerion.php', 'The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.');
 }
 
 if($mysql == NULL) {
-    $nicCon->callError(true, 'nicLoader.php', 'The backend couldnt connect to the database correctly, please check your variables');
+    $console->callError(true, 'nicLoader.php', 'The backend couldnt connect to the database correctly, please check your variables');
 }
 ?>

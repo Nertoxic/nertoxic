@@ -22,7 +22,7 @@ include '../../nicLoader.php';
     }
 
     if($dbOutput == NULL) {
-        $nicCon->callError(true, 'public/test/database.php', 'The Database couldnt be loaded correctly. Notice: The Test page only works with the default .env credentials
+        $console->callError(true, 'public/test/database.php', 'The Database couldnt be loaded correctly. Notice: The Test page only works with the default .env credentials
         or if you got a -nicTesting- database with a -lineContent- and a -key- field, which got one field filled out.');
     } else {
         require OUT_PATH.'success_database.html';

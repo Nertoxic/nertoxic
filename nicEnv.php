@@ -11,7 +11,7 @@
 $env = parse_ini_file('.env');
 
 if ($env === false) {
-    $nicCon->callError(true, 'nicEnv.php', 'The .env file couldnt be loaded, please check the file for any errors.');
+    $console->callError(true, 'nicEnv.php', 'The .env file couldnt be loaded, please check the file for any errors.');
 } else {
     // Basic env Variables that need to be global available
     $APP_NAME = $env['APP_NAME'];
