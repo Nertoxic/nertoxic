@@ -35,6 +35,7 @@ if ($env === false) {
     // Auth variables that need to be global available
     $NIC_AUTH_RETURN_ERROR = $env['NIC_AUTH_RETURN_ERROR'];
     $NIC_AUTH_REGISTER = $env['NIC_AUTH_ALLOW_REGISTER'];
+    $NIC_AUTH_REDERICT_LOGIN = $env['NIC_AUTH_REDERICT_LOGIN'];
 }
 
 ?>

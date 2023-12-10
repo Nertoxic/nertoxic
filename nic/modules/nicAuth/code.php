@@ -23,6 +23,7 @@ class auth Extends mysql
 
         // Set default values
         $authSuccess = true;
+        $authFeedback = "";
 
         // Check if password is doubled
         if($password !== $passwordRepeat) {
@@ -63,6 +64,62 @@ class auth Extends mysql
         // Print error if user enabled it
         if($GLOBALS['NIC_AUTH_RETURN_ERROR'] == 'true') {
             print($authFeedback);
+        }
+
+        // Return true / false
+        return $authSuccess;
+
+    }
+    
+    /*
+     * Login into account
+     */
+    public function login($username, $password)
+    {
+
+        // Set default values
+        $authSuccess = true;
+        $authFeedback = "";
+
+        // Check if username is empty
+        if(empty($username)) {
+            $authSuccess = false;
+            $authFeedback = "The username must be provided";
+        }
+
+        // Check if password is empty
+        if(empty($password)) {
+            $authSuccess = false;
+            $authFeedback = "The password must be provided";
+        }
+
+        // Get user Data
+        $LOGINUSER = self::db()->prepare("SELECT * FROM `users` WHERE `username` = :username");
+        $LOGINUSER->execute(array(":username" => $username));
+        while ($user = $LOGINUSER -> fetch(PDO::FETCH_ASSOC)){
+
+            $checkPass = password_verify($password, $user['password']);
+            if(!$checkPass == 1) {
+                $authSuccess = false;
+                $authFeedback = "The password isnt correct, please check it.";
+            }
+    
+        }
+
+        // If no user was found
+        if($LOGINUSER->rowCount() == NULL) {
+            $authSuccess = false;
+            $authFeedback = "The user couldnt be found";
+        }
+
+        // Print error if user enabled it
+        if($GLOBALS['NIC_AUTH_RETURN_ERROR'] == 'true') {
+            print($authFeedback);
+        }
+
+        // If success
+        if($authSuccess == true) {
+            header("Location:".$GLOBALS['NIC_BASE_URL'].$GLOBALS['NIC_AUTH_REDERICT_LOGIN']);
         }
 
         // Return true / false
