@@ -120,10 +120,12 @@ class auth Extends mysql
         // If success
         if($authSuccess == true) {
 
+            $length = 32;
             $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            $sessiontoken = '';
-            for ($i = 0; $i < 10; $i++) {
-                $sessiontoken = $characters[rand(0, strlen($characters))];
+            $charactersLength = strlen($characters);
+            $randomString = '';
+            for ($i = 0; $i < $length; $i++) {
+                $sessiontoken .= $characters[random_int(0, $charactersLength - 1)];
             }
 
             $INSERTSESS = self::db()->prepare("UPDATE `users` SET `session` = :sesstoken WHERE `username` = :username");
