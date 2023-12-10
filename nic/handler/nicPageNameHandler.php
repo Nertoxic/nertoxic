@@ -13,15 +13,25 @@
 # --------------------------------------------------------------------
 
 if($nicPageType == "front") {
+    // Load html/css/js
+    require STORAGE.'assets/front/head.html';
+    require STORAGE.'assets/front/header.html';
 }
 
 if($nicPageType == "back") {
+    // Load html/css/js
+    require STORAGE.'assets/back/head.html';
+    require STORAGE.'assets/back/header.html';
 }
 
 if($nicPageType == "auth") {
     if(!$sessionToken == NULL) {
         header("Location:".$NIC_BASE_URL);
     }
+
+    // Load html/css/js
+    require STORAGE.'assets/auth/head.html';
+    require STORAGE.'assets/auth/header.html';
 }
 
 # --------------------------------------------------------------------
