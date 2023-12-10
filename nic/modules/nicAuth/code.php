@@ -67,6 +67,7 @@ class auth Extends mysql
         }
 
         // Return true / false
+        header("Location:".$GLOBALS['NIC_BASE_URL'].$GLOBALS['NICH_AUTH_REDERICT_REGISTER']);
         return $authSuccess;
 
     }
