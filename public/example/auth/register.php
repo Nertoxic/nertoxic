@@ -18,7 +18,7 @@ if(isset($_POST['register'])) {
 
 <h1> Register Example Page </h1>
 <br>
-<small>Register successfull: <?= $authSuccess; ?></small>
+<small>Register successfull: <?= $authFeedback; ?></small>
 
 <br><br>
 

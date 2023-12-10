@@ -25,7 +25,7 @@ class auth Extends mysql
         $authSuccess = true;
 
         // Check if password is doubled
-        if($password ==! $passwordRepeat) {
+        if($password !== $passwordRepeat) {
             $authSuccess = false;
             $authFeedback = "The Passwords are not matching";
         }
@@ -50,7 +50,7 @@ class auth Extends mysql
         }
 
         // Return auth code
-        return $authSuccess;
+        return $authFeedback;
 
     }
 
