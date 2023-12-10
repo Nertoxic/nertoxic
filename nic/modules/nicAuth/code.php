@@ -141,5 +141,30 @@ class auth Extends mysql
 
     }
 
+    /*
+     * Log user out
+     */
+    public function logout($token)
+    {
+
+        $authSuccess = true;
+
+        // Check if session is empty
+        if(empty($token)) {
+            $authSuccess = false;
+            $authFeedback = "The Session token cant be empty";
+        }
+
+        // Remove cookie
+        if($authSuccess == true) {
+            unset($_COOKIE['SESS']);
+            setcookie("SESS", "", time() - 3600);
+        }
+
+        // Rederict user and return
+        header("Location:".$GLOBALS['NIC_BASE_URL']);
+        return $authSuccess;
+    }
+
 }
 ?>
