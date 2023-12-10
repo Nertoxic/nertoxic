@@ -61,7 +61,7 @@ class auth Extends mysql
         }
 
         // Print error if user enabled it
-        if($GLOBALS['NIC_AUTH_RETURN_ERROR'] == true) {
+        if($GLOBALS['NIC_AUTH_RETURN_ERROR'] == 'true') {
             print($authFeedback);
         }
 
