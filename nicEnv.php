@@ -31,6 +31,9 @@ if ($env === false) {
     $NIC_MS_SENDER = $env['NIC_MS_SENDER'];
     $NIC_MS_PASSWORD = $env['NIC_MS_PASSWORD'];
     $NIC_MS_PORT = $env['NIC_MS_PORT'];
+
+    // Auth variables that need to be global available
+    $NIC_AUTH_REGISTER = $env['NIC_AUTH_ALLOW_REGISTER'];
 }
 
 ?>
