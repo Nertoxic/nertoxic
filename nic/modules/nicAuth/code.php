@@ -158,11 +158,15 @@ class auth Extends mysql
         // Remove cookie
         if($authSuccess == true) {
             unset($_COOKIE['SESS']);
-            setcookie("SESS", "", time() - 3600);
+            //setcookie("SESS", "", time() - 3600);
         }
 
         // Rederict user and return
-        header("Location:".$GLOBALS['NIC_BASE_URL']);
+        if($_COOKIE['SESS'] == NULL) {
+            header("Location:".$GLOBALS['NIC_BASE_URL']);
+        } else {
+            echo("Error while logging user out, couldnt remove cookie!");
+        }
         return $authSuccess;
     }
 
