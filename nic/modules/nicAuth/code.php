@@ -27,7 +27,7 @@ class auth Extends mysql
         // Check if password is doubled
         if($password !== $passwordRepeat) {
             $authSuccess = false;
-            $authFeedback = "The Passwords are not matching";
+            $authFeedback = "The Passwords arent matching, please check them";
         }
 
         // Check if Register is allowed
