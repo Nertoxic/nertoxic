@@ -50,7 +50,7 @@ class auth Extends mysql
         }
 
         // Return auth code
-        return $authFeedback;
+        print($authFeedback);
 
     }
 
