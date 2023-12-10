@@ -9,14 +9,18 @@
 #
 $nicPageType = "front"; # Use front for loading the frontend css/js and back to load the backend css/js
 include '../../../nicLoader.php'; # Check if you used the correct loading folder
-
-if(isset($_POST['register'])) {
-    $auth->register($_POST['username'], $_POST['usermail'], $_POST['password'], $_POST['password_repeat']);
-}
 ?>
 
 
 <h1> Register Example Page </h1>
+<br>
+<small>
+    <?php
+    if(isset($_POST['register'])) {
+        $auth->register($_POST['username'], $_POST['usermail'], $_POST['password'], $_POST['password_repeat']);
+    }
+    ?>
+</s,aöö>
 
 <br><br>
 
