@@ -19,12 +19,21 @@ if($nicPageType == "front") {
 }
 
 if($nicPageType == "back") {
+
+    // Check if session token is empty
+    if($sessionToken == NULL) {
+        header("Location:".$NIC_BASE_URL);
+    }
+
     // Load html/css/js
     require ASSETS.'back/head.php';
     require ASSETS.'back/header.php';
+
 }
 
 if($nicPageType == "auth") {
+
+    // Check if session token is empty
     if(!$sessionToken == NULL) {
         header("Location:".$NIC_BASE_URL);
     }
@@ -32,6 +41,7 @@ if($nicPageType == "auth") {
     // Load html/css/js
     require ASSETS.'auth/head.php';
     require ASSETS.'auth/header.php';
+
 }
 
 # --------------------------------------------------------------------
