@@ -14,14 +14,14 @@
 
 if($nicPageType == "front") {
     // Load html/css/js
-    require STORAGE.'assets/front/head.php';
-    require STORAGE.'assets/front/header.php';
+    require ASSETS.'front/head.php';
+    require ASSETS.'front/header.php';
 }
 
 if($nicPageType == "back") {
     // Load html/css/js
-    require STORAGE.'assets/back/head.php';
-    require STORAGE.'assets/back/header.php';
+    require ASSETS.'back/head.php';
+    require ASSETS.'back/header.php';
 }
 
 if($nicPageType == "auth") {
@@ -30,8 +30,8 @@ if($nicPageType == "auth") {
     }
 
     // Load html/css/js
-    require STORAGE.'assets/auth/head.php';
-    require STORAGE.'assets/auth/header.php';
+    require ASSETS.'auth/head.php';
+    require ASSETS.'auth/header.php';
 }
 
 # --------------------------------------------------------------------

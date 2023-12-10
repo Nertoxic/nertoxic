@@ -24,7 +24,7 @@ define('SECURITY_PATH', __DIR__.'/nic/security/');
 define('HANDLER_PATH', __DIR__.'/nic/handler/');
 define('DB_PATH', __DIR__.'/nic/database/');
 define('OUT_PATH', __DIR__.'/nic/out/');
-define('STORAGE', __DIR__.'storage/');
+define('ASSETS', __DIR__.'/storage/assets/');
 
 # --------------------------------------------------------------------
 # Include files
