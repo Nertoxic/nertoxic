@@ -60,8 +60,13 @@ class auth Extends mysql
             ));
         }
 
-        // Return auth code
-        print($authFeedback);
+        // Print error if user enabled it
+        if($GLOBALS('NIC_AUTH_RETURN_ERROR') == true) {
+            print($authFeedback);
+        }
+
+        // Return true / false
+        return $authSuccess;
 
     }
 

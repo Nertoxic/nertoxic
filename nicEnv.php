@@ -33,6 +33,7 @@ if ($env === false) {
     $NIC_MS_PORT = $env['NIC_MS_PORT'];
 
     // Auth variables that need to be global available
+    $NIC_AUTH_RETURN_ERROR = $env['NIC_AUTH_RETURN_ERROR'];
     $NIC_AUTH_REGISTER = $env['NIC_AUTH_ALLOW_REGISTER'];
 }
 
