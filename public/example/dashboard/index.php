@@ -12,3 +12,4 @@ include '../../../nicLoader.php'; # Check if you used the correct loading folder
 ?>
 
 <?= $_COOKIE['SESS']; ?>
+<?= $username; ?>

@@ -9,6 +9,25 @@
 #
 
 # --------------------------------------------------------------------
+# load user table
+# --------------------------------------------------------------------
+
+if(!$sessionToken == NULL) {
+
+    $USERDATA = $mysql->db()->prepare("SELECT * FROM `users` WHERE `session` = :session");
+    $USERDATA->execute(array(":session" => $sessionToken));
+    while ($user = $USERDATA -> fetch(PDO::FETCH_ASSOC)){
+
+        // nicAuth Module
+        $username = $user['username'];
+        $usermail = $user['usermail'];
+
+        // nicInvoicing
+
+    }
+
+}
+# --------------------------------------------------------------------
 # Global page types
 # --------------------------------------------------------------------
 
