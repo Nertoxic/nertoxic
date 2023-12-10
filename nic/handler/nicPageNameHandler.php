@@ -19,7 +19,7 @@ if($nicPageType == "back") {
 }
 
 if($nicPageType == "auth") {
-    if($sessionToken ==! NULL) {
+    if($sessionToken !== NULL) {
         header("Location:".$NIC_BASE_URL);
     }
 }
