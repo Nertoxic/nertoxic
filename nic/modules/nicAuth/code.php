@@ -119,6 +119,17 @@ class auth Extends mysql
 
         // If success
         if($authSuccess == true) {
+
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $sessiontoken = '';
+            for ($i = 0; $i < 10; $i++) {
+                $sessiontoken = $characters[rand(0, strlen($characters))];
+            }
+
+            $INSERTSESS = self::db()->prepare("UPDATE `users` SET `session` = :sesstoken WHERE `username` = :username");
+            $INSERTSESS->execute(array(":sesstoken" => $sessiontoken, ":username" => $username));
+
+            setcookie('SESS', $sessiontoken, time()+'864000', '/');
             header("Location:".$GLOBALS['NIC_BASE_URL'].$GLOBALS['NIC_AUTH_REDERICT_LOGIN']);
         }
 
