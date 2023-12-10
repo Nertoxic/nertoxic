@@ -33,7 +33,18 @@ class auth Extends mysql
         // Check if Register is allowed
         if($GLOBALS['NIC_AUTH_REGISTER'] == "false") {
             $authSuccess = false;
-            $authFeedback = "Registration has been disabled.";
+            $authFeedback = "The Registration isnt enabled at the moment.";
+        }
+
+        // Check if the email is already in use
+        $MAILUSED = self::db()->prepare("SELECT * FROM `users` WHERE `usermail` = :usermail");
+        $MAILUSED->execute(array(
+            ":usermail" => $usermail
+        ));
+
+        if($MAILUSED->rowCount() !== NULL) {
+            $authSuccess = false;
+            $authFeedback = "This E-Mail is already in use!";
         }
 
         // Check if auth was success
