@@ -42,7 +42,7 @@ class auth Extends mysql
             ":usermail" => $usermail
         ));
 
-        if($MAILUSED->rowCount() !== NULL) {
+        if(!$MAILUSED->rowCount() == NULL) {
             $authSuccess = false;
             $authFeedback = "This E-Mail is already in use!";
         }
