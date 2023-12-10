@@ -15,6 +15,8 @@
 $nicConsoleErrorFile = 0;
 $neededPHPVersion = '8.0';
 
+$sessionToken = $_COOKIE['SESS'];
+
 define('BASE_PATH', __DIR__.'/');
 define('CORE_PATH', __DIR__.'/nic/core/');
 define('MODULE_PATH', __DIR__.'/nic/modules/');
@@ -46,12 +48,6 @@ require HANDLER_PATH.'nicPageNameHandler.php'; # Manage page Namens
 } catch (Exception $e) {
     $nicCon->callError(true, 'nicLoader.php', 'There was an error while loading the loader.');
 }
-
-# --------------------------------------------------------------------
-# Variable Setup
-# --------------------------------------------------------------------
-
-$sessionToken = $_COOKIE['SESS'];
 
 # --------------------------------------------------------------------
 # Error handling
