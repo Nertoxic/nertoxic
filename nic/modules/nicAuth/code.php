@@ -48,6 +48,17 @@ class auth Extends mysql
             $authFeedback = "This E-Mail is already in use!";
         }
 
+        // Check if the username is already in use
+        $NAMEUSED = self::db()->prepare("SELECT * FROM `users` WHERE `username` = :username");
+        $NAMEUSED->execute(array(
+            ":username" => $username
+        ));
+
+        if(!$NAMEUSED->rowCount() == NULL) {
+            $authSuccess = false;
+            $authFeedback = "The Username is already in use!";
+        }
+
         // Check if auth was success
         if($authSuccess == true) {
 
