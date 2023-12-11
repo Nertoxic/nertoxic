@@ -14,7 +14,7 @@
 # Desc: This module will add a function to call a webhook
 # --------------------------------------------------------------------
 
-$moduleIsActive = false;
+$moduleIsActive = true;
 
 if($moduleIsActive == true) {
     include MODULE_PATH.'nicDiscord/code.php';

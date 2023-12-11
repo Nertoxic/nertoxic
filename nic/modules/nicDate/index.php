@@ -14,7 +14,7 @@
 # Desc: This will handle some Date specific requests
 # --------------------------------------------------------------------
 
-$moduleIsActive = false;
+$moduleIsActive = true;
 
 if($moduleIsActive == true) {
     include MODULE_PATH.'nicDate/code.php';
