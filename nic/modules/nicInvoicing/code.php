@@ -55,25 +55,57 @@ class inv Extends mysql
     public function startPayment($amount, $provider, $userid)
     {
 
-        if($provider == "mollie") {
+        $paymentSuccess = false;
 
-            // Authorise to the api
-            $mollie = new \Mollie\Api\MollieApiClient();
-            $mollie->setApiKey($NIC_INV_MOLLIE_KEY);
-
-            $payment = $mollie->payments->create([
-                "amount" => [
-                    "currency" => "EUR",
-                    "value" => $amount
-                ],
-                "description" => "Charge Budget",
-                "redirectUrl" => $BASE_URL.$NIC_INV_PAYMENT_SUCCESS_PAGE,
-                //"webhookUrl"  => "https://webshop.example.org/mollie-webhook/",
-            ]);
-
+        if(empty($amount)) {
+            $paymentSuccess = false;
+            $paymentFeedback = "You need to enter a valid amount";
         }
 
-        return false;
+        if(empty($provider)) {
+            $paymentSuccess = false;
+            $paymentFeedback = "You need to enter a valid payment provider";
+        }
+
+        if(empty($userid)) {
+            $paymentSuccess = false;
+            $paymentFeedback = "The userid couldnt be found, please re-login";
+        }
+
+        if($paymentSuccess == true) {
+            if($provider == "mollie") {
+
+                // Authorise to the api
+                $mollie = new \Mollie\Api\MollieApiClient();
+                $mollie->setApiKey($NIC_INV_MOLLIE_KEY);
+    
+                // Create payment
+                $payment = $mollie->payments->create([
+                    "amount" => [
+                        "currency" => "EUR",
+                        "value" => $amount
+                    ],
+                    "description" => "Charge Budget",
+                    "redirectUrl" => $BASE_URL.$NIC_INV_PAYMENT_SUCCESS_PAGE."?amount=".$amount,
+                ]);
+
+                // Check if payment was successfull
+                if($payment == true) {
+                    self::createInvoice($amount, false, 'Charged via Mollie', $GLOBALS['username']);
+                } else {
+                    $paymentSuccess = false;
+                }
+    
+            }
+
+            if($provider == "paypal") {
+
+                // Enter paypal api
+
+            }
+        }
+
+        return $paymentSuccess;
     }
 
 }
