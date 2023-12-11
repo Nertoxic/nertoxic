@@ -22,11 +22,11 @@ include '../../../nicLoader.php'; # Check if you used the correct loading folder
 <label for="provider">Payment Provider</label>
 <select name="provider" id="provider">
 
-    <?php if($env['NIC_INV_MOLLIE_KEY' !== NULL]) { ?>
+    <?php if($env['NIC_INV_MOLLIE_KEY'] !== NULL) { ?>
         <option value="mollie">Mollie</option>
     <?php } ?>
 
-    <?php if($env['NIC_INV_MOLLIE_KEY' !== NULL]) { ?>
+    <?php if($env['NIC_INV_MOLLIE_KEY'] !== NULL) { ?>
         <option value="paypal">PayPal</option>
     <?php } ?>
 
