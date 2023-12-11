@@ -60,15 +60,15 @@ if (version_compare(PHP_VERSION, $neededPHPVersion, '<'))
     $console->callError(true, 'nicLoader.php', 'The Nertoxic Framework couldnt be loaded, you need at least the PHP Version '.$neededPHPVersion);
 }
 
+if($nic_version == NULL) {
+    $console->callError(true, 'nicVerion.php', 'The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.');
+}
+
 /* Database isnt required
 if($env['NIC_USED_DB'] == NULL) {
     $console->callError(true, 'nicLoader.php', 'The database type couldnt be loaded, check if the right value has been set inside the .env file.');
 }
 */
-
-if($nic_version == NULL) {
-    $console->callError(true, 'nicVerion.php', 'The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.');
-}
 
 /* Database isnt required
 if($mysql == NULL) {
