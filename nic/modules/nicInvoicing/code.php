@@ -46,5 +46,16 @@ class inv Extends mysql
 
     }
 
+    
+    /*
+    * startPayment
+    *
+    * This function will start a payment session
+    */
+    public function startPayment($amount, $provider, $userid)
+    {
+        return false;
+    }
+
 }
 ?>
