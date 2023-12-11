@@ -17,16 +17,18 @@ include '../../../nicLoader.php'; # Check if you used the correct loading folder
 
 <form method="POST">
 <input name="amount" type="number" placeholder="1.00"></input>
+<br>
 <button name="chargeMoney" type="submit">Charge money</button>
+<br>
 
 <label for="provider">Payment Provider</label>
 <select name="provider" id="provider">
 
-    <?php if($env['NIC_INV_MOLLIE_KEY' ==! NULL]) { ?>
+    <?php if($env['NIC_INV_MOLLIE_KEY' !== NULL]) { ?>
         <option value="mollie">Mollie</option>
     <?php } ?>
 
-    <?php if($env['NIC_INV_MOLLIE_KEY' ==! NULL]) { ?>
+    <?php if($env['NIC_INV_MOLLIE_KEY' !== NULL]) { ?>
         <option value="paypal">PayPal</option>
     <?php } ?>
 
