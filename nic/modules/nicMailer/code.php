@@ -10,8 +10,6 @@
 
 $mailer = new mailer();
 
-require BASE_PATH.'vendor/autoload.php';
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
