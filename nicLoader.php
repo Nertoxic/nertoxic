@@ -31,10 +31,10 @@ define('ASSETS', __DIR__.'/storage/assets/');
 #--------------------------------------------------------------------
 try {
 
+require CORE_PATH.'nicConsole.php'; # Load the Console
 require BASE_PATH.'nicEnv.php'; # Load Env variables
 require BASE_PATH.'nicVersion.php'; # Load NIC Version
 require BASE_PATH.'vendor/autoload.php'; # Loa all vendor files
-require CORE_PATH.'nicConsole.php'; # Load the Console
 
 // Database loading
 if($env['NIC_USED_DB'] == "mysql") {
