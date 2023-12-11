@@ -77,7 +77,7 @@ class inv Extends mysql
 
                 // Authorise to the api
                 $mollie = new \Mollie\Api\MollieApiClient();
-                $mollie->setApiKey($NIC_INV_MOLLIE_KEY);
+                $mollie->setApiKey($GLOBALS['NIC_INV_MOLLIE_KEY']);
     
                 // Create payment
                 $payment = $mollie->payments->create([
