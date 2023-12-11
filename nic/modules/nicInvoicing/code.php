@@ -54,6 +54,34 @@ class inv Extends mysql
     */
     public function startPayment($amount, $provider, $userid)
     {
+
+        if($provider == "mollie") {
+
+            // Authorise to the api
+            $mollie = new \Mollie\Api\MollieApiClient();
+            $mollie->setApiKey($NIC_INV_MOLLIE_KEY);
+
+            $order = $mollie->orders->create([
+                "amount" => [
+                    "value" => $amount,
+                    "currency" => "EUR",
+                ],
+                
+                "locale" => "en_US",
+
+                "redirectUrl" => $BASE_URL.$NIC_INV_PAYMENT_SUCCESS_PAE,
+
+                "lines" => [
+                    [
+                        "name" => "Budget Chargeing",
+                        "quantity" => 1,
+                    ],
+                ],
+
+            ]);
+
+        }
+
         return false;
     }
 
