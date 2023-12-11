@@ -21,6 +21,14 @@ if(!$sessionToken == NULL) {
         // nicAuth Module
         $username = $user['username'];
         $usermail = $user['usermail'];
+        $usermail_verified = $user['mail_verified'];
+
+        // nicAuth Mail Verify
+        if($NIC_AUTH_FORCE_MAIL_VERIFY == "true") {
+            if($usermail_verified == false) {
+                header("Location:".$BASE_URL.$NIC_AUTH_MAIL_VERIFY_PAGE);
+            }
+        }
 
         // nicInvoicing
 

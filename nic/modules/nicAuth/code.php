@@ -170,5 +170,18 @@ class auth Extends mysql
         return $authSuccess;
     }
 
+    
+    /*
+     * Verify users mail
+     */
+    public function verifyMail($usermail)
+    {
+
+        $VERIFYMAIL = self::db()->prepare("UPDATE `users` set `mail_verified` = 'true' WHERE `usermail` = :usermail");
+        $VERIFYMAIL->execute(array(":usermail" => $usermail));
+
+        return true;
+    }
+
 }
 ?>

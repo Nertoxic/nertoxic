@@ -92,5 +92,19 @@ class base
         $date = new DateTime($date, new DateTimeZone('Europe/Berlin'));
         return $date->format('d.m.Y H:i');
     }
+    
+    /*
+     * verifyString
+     *
+     * Verify to values which each others
+     */
+    public function verifyString($val1, $val2)
+    {
+        if($val1 == $val2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
