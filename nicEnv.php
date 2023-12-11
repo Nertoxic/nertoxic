@@ -42,7 +42,7 @@ if ($env === false) {
 
     // Inv variables that need to be global available
     $NIC_INV_MOLLIE_KEY = $env['NIC_INV_MOLLIE_KEY'];
-    $NIC_INV_PAYMENT_SUCCESS_PAE = $env['NIC_INV_PAYMENT_SUCCESS_PAE'];
+    $NIC_INV_PAYMENT_SUCCESS_PAGE = $env['NIC_INV_PAYMENT_SUCCESS_PAGE'];
 }
 
 ?>

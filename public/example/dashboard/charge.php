@@ -11,7 +11,7 @@ $nicPageType = "back"; # Use front for loading the frontend css/js and back to l
 include '../../../nicLoader.php'; # Check if you used the correct loading folder
 
 if(isset($_POST['chargeMoney'])) {
-    $inv->startPayment($amount, $provider, $userid);
+    $inv->startPayment($_POST['amount'], $_POST['provider'], $userid);
 }
 ?>
 

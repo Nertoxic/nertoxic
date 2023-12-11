@@ -61,23 +61,14 @@ class inv Extends mysql
             $mollie = new \Mollie\Api\MollieApiClient();
             $mollie->setApiKey($NIC_INV_MOLLIE_KEY);
 
-            $order = $mollie->orders->create([
+            $payment = $mollie->payments->create([
                 "amount" => [
-                    "value" => $amount,
                     "currency" => "EUR",
+                    "value" => $amount
                 ],
-                
-                "locale" => "en_US",
-
-                "redirectUrl" => $BASE_URL.$NIC_INV_PAYMENT_SUCCESS_PAE,
-
-                "lines" => [
-                    [
-                        "name" => "Budget Chargeing",
-                        "quantity" => 1,
-                    ],
-                ],
-
+                "description" => "Charge Budget",
+                "redirectUrl" => $BASE_URL.$NIC_INV_PAYMENT_SUCCESS_PAGE,
+                //"webhookUrl"  => "https://webshop.example.org/mollie-webhook/",
             ]);
 
         }
