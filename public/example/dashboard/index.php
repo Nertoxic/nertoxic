@@ -11,5 +11,4 @@ $nicPageType = "back"; # Use front for loading the frontend css/js and back to l
 include '../../../nicLoader.php'; # Check if you used the correct loading folder
 ?>
 
-<?= $_COOKIE['SESS']; ?>
 <?= $username; ?>
