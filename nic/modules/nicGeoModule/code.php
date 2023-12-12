@@ -23,5 +23,5 @@ $resp = curl_exec($curl);
 curl_close($curl);
 
 $geoLocation = $resp;
-var_dump($geoLocation); // DEBUG temporary
+var_dump(json_decode($geoLocation)); // DEBUG temporary
 ?>
