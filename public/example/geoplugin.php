@@ -12,7 +12,6 @@ include '../../nicLoader.php';
 ?>
 
 <?php 
-    $geoplugin = new geoPlugin();
     $geoplugin->locate(); 
     echo "Geolocation results for {$geoplugin->ip}: <br />\n".
 	"City: {$geoplugin->city} <br />\n".
