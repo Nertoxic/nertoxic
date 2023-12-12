@@ -8,7 +8,7 @@
 #
 #
 
-foreach (glob(CACHE.'*/data.php') as $filename)
+foreach (glob(CACHE_PATH.'*/data.php') as $filename)
 {
     if($filename != 'load.php'){
         include_once $filename;

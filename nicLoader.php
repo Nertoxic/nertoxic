@@ -25,7 +25,7 @@ define('HANDLER_PATH', __DIR__.'/nic/handler/');
 define('DB_PATH', __DIR__.'/nic/database/');
 define('OUT_PATH', __DIR__.'/nic/out/');
 define('ASSETS', __DIR__.'/storage/assets/');
-define('CACHE', __DIR__.'/storage/cache/');
+define('CACHE_PATH', __DIR__.'/storage/cache/');
 
 # --------------------------------------------------------------------
 # Include files
@@ -37,7 +37,7 @@ require BASE_PATH.'nicEnv.php'; # Load Env variables
 require BASE_PATH.'nicVersion.php'; # Load NIC Version
 require BASE_PATH.'vendor/autoload.php'; # Loa all vendor files
 
-require CACHE.'load.php'; # Load all cache files
+require CACHE_PATH.'load.php'; # Load all cache files
 
 // Database loading
 if($env['NIC_USED_DB'] == "mysql") {
