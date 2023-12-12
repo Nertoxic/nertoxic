@@ -11,4 +11,7 @@ $nicPageType = "geoplugin_example";
 include '../../nicLoader.php';
 ?>
 
-<?php $geoplugin->locate(); ?>
+<?php 
+    $geoplugin = new geoPlugin();
+    $geoplugin->locate(); 
+?>
