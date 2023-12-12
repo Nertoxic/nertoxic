@@ -12,22 +12,22 @@ include '../../nicLoader.php';
 ?>
 
 <?php 
-    $geoplugin->locate(); 
-    echo "Geolocation results for {$geoplugin->ip}: <br />\n".
-	"City: {$geoplugin->city} <br />\n".
-	"Region: {$geoplugin->region} <br />\n".
-	"Region Code: {$geoplugin->regionCode} <br />\n".
-	"Region Name: {$geoplugin->regionName} <br />\n".
-	"DMA Code: {$geoplugin->dmaCode} <br />\n".
-	"Country Name: {$geoplugin->countryName} <br />\n".
-	"Country Code: {$geoplugin->countryCode} <br />\n".
-	"In the EU?: {$geoplugin->inEU} <br />\n".
-	"EU VAT Rate: {$geoplugin->euVATrate} <br />\n".
-	"Latitude: {$geoplugin->latitude} <br />\n".
-	"Longitude: {$geoplugin->longitude} <br />\n".
-	"Radius of Accuracy (Miles): {$geoplugin->locationAccuracyRadius} <br />\n".
-	"Timezone: {$geoplugin->timezone}  <br />\n".
-	"Currency Code: {$geoplugin->currencyCode} <br />\n".
-	"Currency Symbol: {$geoplugin->currencySymbol} <br />\n".
-	"Exchange Rate: {$geoplugin->currencyConverter} <br />\n";
+    $geo->locate(); 
+    echo "Geolocation results for {$geo->ip}: <br />\n".
+	"City: {$geo->city} <br />\n".
+	"Region: {$geo->region} <br />\n".
+	"Region Code: {$geo->regionCode} <br />\n".
+	"Region Name: {$geo->regionName} <br />\n".
+	"DMA Code: {$geo->dmaCode} <br />\n".
+	"Country Name: {$geo->countryName} <br />\n".
+	"Country Code: {$geo->countryCode} <br />\n".
+	"In the EU?: {$geo->inEU} <br />\n".
+	"EU VAT Rate: {$geo->euVATrate} <br />\n".
+	"Latitude: {$geo->latitude} <br />\n".
+	"Longitude: {$geo->longitude} <br />\n".
+	"Radius of Accuracy (Miles): {$geo->locationAccuracyRadius} <br />\n".
+	"Timezone: {$geo->timezone}  <br />\n".
+	"Currency Code: {$geo->currencyCode} <br />\n".
+	"Currency Symbol: {$geo->currencySymbol} <br />\n".
+	"Exchange Rate: {$geo->currencyConverter} <br />\n";
 ?>

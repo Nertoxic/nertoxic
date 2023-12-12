@@ -149,6 +149,6 @@ class geoPlugin {
 	
 }
 
-$geoplugin = new geoPlugin();
+$geo = new geoPlugin();
 
 ?>
