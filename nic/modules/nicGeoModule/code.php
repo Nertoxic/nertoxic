@@ -9,7 +9,7 @@
 #
 
 
-$url = "https://www.geoplugin.net/php.gp?20ip=123.45.57.33";
+$url = "https://www.geoplugin.net/php.gp?20ip=".$clientAddr;
 
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
