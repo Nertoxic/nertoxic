@@ -1,8 +1,8 @@
 <?php
 
-$catch = new catch();
+$cache = new cache();
 
-class catch
+class cache
 
 {
 
