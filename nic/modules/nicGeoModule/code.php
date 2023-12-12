@@ -8,6 +8,20 @@
 #
 #
 
-$geoLocation_plain = var_export(unserialize(file_get_contents('http://www.geoplugin.net/php.gp? ip='.$clientAddr)));
-print_r($geoLocation_plain);
+
+$url = "https://www.geoplugin.net/php.gp?20ip=123.45.57.33";
+
+$curl = curl_init($url);
+curl_setopt($curl, CURLOPT_URL, $url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+//for debug only!
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+$resp = curl_exec($curl);
+curl_close($curl);
+
+$geoLocation = $resp;
+
 ?>
