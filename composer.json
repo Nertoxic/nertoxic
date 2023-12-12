@@ -1,4 +1,5 @@
 {
+	
     "name": "nertoxic/v1",
     "description": "This is the nertoxic Framework based on PHP without routing.",
     "license": "MIT",
@@ -15,4 +16,5 @@
 		"symfony/options-resolver": "^3.4",
         "mollie/mollie-api-php": "^2.60"
     }
+	
 }
