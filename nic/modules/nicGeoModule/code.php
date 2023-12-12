@@ -111,40 +111,7 @@ class geoPlugin {
 		
 		return $response;
 	}
-	
-	function convert($amount, $float=2, $symbol=true) {
-		
-		//easily convert amounts to geolocated currency.
-		if ( !is_numeric($this->currencyConverter) || $this->currencyConverter == 0 ) {
-			trigger_error('geoPlugin class Notice: currencyConverter has no value.', E_USER_NOTICE);
-			return $amount;
-		}
-		if ( !is_numeric($amount) ) {
-			trigger_error ('geoPlugin class Warning: The amount passed to geoPlugin::convert is not numeric.', E_USER_WARNING);
-			return $amount;
-		}
-		if ( $symbol === true ) {
-			return $this->currencySymbol . round( ($amount * $this->currencyConverter), $float );
-		} else {
-			return round( ($amount * $this->currencyConverter), $float );
-		}
-	}
-	
-	function nearby($radius=10, $limit=null) {
 
-		if ( !is_numeric($this->latitude) || !is_numeric($this->longitude) ) {
-			trigger_error ('geoPlugin class Warning: Incorrect latitude or longitude values.', E_USER_NOTICE);
-			return array( array() );
-		}
-		
-		$host = "http://www.geoplugin.net/extras/nearby.gp?lat=" . $this->latitude . "&long=" . $this->longitude . "&radius={$radius}";
-		
-		if ( is_numeric($limit) )
-			$host .= "&limit={$limit}";
-			
-		return unserialize( $this->fetch($host) );
-
-	}
 
 	
 }
