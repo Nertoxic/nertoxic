@@ -14,7 +14,7 @@
 # Desc: This module will get the geoLocation of the current visitor
 # --------------------------------------------------------------------
 
-$moduleIsActive = false;
+$moduleIsActive = true;
 
 if($moduleIsActive == true) {
     include MODULE_PATH.'nicGeoModule/code.php';
