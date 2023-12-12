@@ -40,7 +40,7 @@ require BASE_PATH.'vendor/autoload.php'; # Loa all vendor files
 
 // Cache System
 require CORE_PATH.'nicCache.php'; # Load all cache files
-require CACHE_PATH.'load.php'; # Load all cache files
+//require CACHE_PATH.'load.php'; # Load all cache files
 
 // Database loading
 if($env['NIC_USED_DB'] == "mysql") {
