@@ -18,7 +18,6 @@ include '../../nicLoader.php';
 	"Region: {$geo->region} <br />\n".
 	"Region Code: {$geo->regionCode} <br />\n".
 	"Region Name: {$geo->regionName} <br />\n".
-	"DMA Code: {$geo->dmaCode} <br />\n".
 	"Country Name: {$geo->countryName} <br />\n".
 	"Country Code: {$geo->countryCode} <br />\n".
 	"In the EU?: {$geo->inEU} <br />\n".
