@@ -149,6 +149,4 @@ class geoPlugin {
 	
 }
 
-$geoplugin->locate();
-
 ?>
