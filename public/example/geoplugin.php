@@ -31,3 +31,5 @@ include '../../nicLoader.php';
 	"Currency Symbol: {$geo->currencySymbol} <br />\n".
 	"Exchange Rate: {$geo->currencyConverter} <br />\n";
 ?>
+
+<?= $geo->ip; ?>
