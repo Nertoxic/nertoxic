@@ -11,4 +11,4 @@ $nicPageType = "";
 include '../../nicLoader.php';
 ?>
 
-<?php $cache->write('test/', '<?php $testCache = "Yes"; ?>'); ?>
+<?php //$cache->write('test/', '<?php $testCache = "Yes"; ?>'); ?>
