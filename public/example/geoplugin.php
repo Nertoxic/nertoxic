@@ -8,7 +8,7 @@
 #
 #
 $nicPageType = "geoplugin_example";
-include '../../../nicLoader.php';
+include '../../nicLoader.php';
 ?>
 
 <?php $geoplugin->locate(); ?>
