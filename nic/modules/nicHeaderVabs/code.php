@@ -16,4 +16,6 @@ $httpDomain = $_SERVER['HTTP_HOST'];
 $httpUri = $_SERVER["REQUEST_URI"];
 $httpQuery = $_SERVER['QUERY_STRING'];
 $httpSelf = $_SERVER['PHP_SELF'];
+
+$clientAddr = $_SERVER['REMOTE_ADDR'];
 ?>
