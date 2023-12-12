@@ -11,3 +11,4 @@
 
 $geoData = var_export(unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$clientAddr)));
 $geoAddr = $geoData['geoplugin_request'];
+var_dump($geoAddr);
