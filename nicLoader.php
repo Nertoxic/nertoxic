@@ -13,7 +13,7 @@
 #--------------------------------------------------------------------
 
 $nicConsoleErrorFile = 0;
-$neededPHPVersion = '8.0';
+$neededPHPVersion = '8.1';
 
 $sessionToken = $_COOKIE['SESS'];
 
@@ -25,6 +25,7 @@ define('HANDLER_PATH', __DIR__.'/nic/handler/');
 define('DB_PATH', __DIR__.'/nic/database/');
 define('OUT_PATH', __DIR__.'/nic/out/');
 define('ASSETS', __DIR__.'/storage/assets/');
+define('CACHE', __DIR__.'/storage/cache/');
 
 # --------------------------------------------------------------------
 # Include files
@@ -35,6 +36,8 @@ require CORE_PATH.'nicConsole.php'; # Load the Console
 require BASE_PATH.'nicEnv.php'; # Load Env variables
 require BASE_PATH.'nicVersion.php'; # Load NIC Version
 require BASE_PATH.'vendor/autoload.php'; # Loa all vendor files
+
+require CACHE.'load.php'; # Load all cache files
 
 // Database loading
 if($env['NIC_USED_DB'] == "mysql") {
@@ -63,6 +66,8 @@ if (version_compare(PHP_VERSION, $neededPHPVersion, '<'))
 if($nic_version == NULL) {
     $console->callError(true, 'nicVerion.php', 'The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.');
 }
+
+if($nic_version ==! )
 
 /* Database isnt required
 if($env['NIC_USED_DB'] == NULL) {
