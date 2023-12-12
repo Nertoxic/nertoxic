@@ -8,6 +8,6 @@
 #
 #
 
-# If anything inside this file is commited the workflows will run a debug through the system. 
+# If anything inside this file is commited the workflows will run a debug through the system.
 
 ?>
