@@ -9,5 +9,6 @@
 #
 
 
-$clientGeo_pl = var_export(unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$clientAddr)));
-$clientGeo = json_decode($clientGeo_pl);
+$clientGeo_pl = file_get_contents('http://www.geoplugin.net/php.gp?ip='.$clientAddr);
+$clientGeo = $clientGeo_pl[0];
+var_dump($clientGeo);
