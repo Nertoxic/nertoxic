@@ -39,8 +39,8 @@ require BASE_PATH.'nicVersion.php'; # Load NIC Version
 require BASE_PATH.'vendor/autoload.php'; # Loa all vendor files
 
 // Cache System
-require CORE_PATH.'nicCache.php'; # Load all cache files
-require CACHE_PATH.'load.php'; # Load all cache files
+require CORE_PATH.'nicCache.php'; # Load all cache functions
+require CACHE_PATH.'load.php'; # Load all cached files
 
 // Database loading
 if($env['NIC_USED_DB'] == "mysql") {
@@ -61,9 +61,12 @@ require HANDLER_PATH.'nicPageNameHandler.php'; # Manage page Namens
 # Error handling
 # --------------------------------------------------------------------
 
-if (version_compare(PHP_VERSION, $neededPHPVersion, '<')) 
-{
+if (version_compare(PHP_VERSION, $neededPHPVersion, '<')) {
     $console->callError(true, 'nicLoader.php', 'The Nertoxic Framework couldnt be loaded, you need at least the PHP Version '.$neededPHPVersion);
+}
+
+if (version_compare(PHP_VERSION, $neededPHPVersion, '=')) {
+    $console->callError(false, 'nicLoader.php', 'The PHP Version you are using will be outdated soon. Please be sure to update the version bevore the support ends.');
 }
 
 if($nic_version == NULL) {
