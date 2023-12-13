@@ -74,7 +74,9 @@ if($nic_version == NULL) {
 }
 
 if($nic_needed_version == NULL) {
-    $console->callError(true, 'nicLoader', 'You didnt setuped the Crone right, please check the docs.');
+    if($nicPageType == "crone") {} else {
+        $console->callError(true, 'nicLoader', 'You didnt setuped the Crone right, please check the docs.');
+    }
 }
 
 if($nic_version < $nic_needed_version) {

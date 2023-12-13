@@ -7,7 +7,7 @@
 # |_| \_|_____|_| \_\|_| \___/_/\_\___\____|
 #
 #
-$nicPageType = "noPageType";
+$nicPageType = "crone";
 include '../../nicLoader.php';
 
 // Check the needed version
