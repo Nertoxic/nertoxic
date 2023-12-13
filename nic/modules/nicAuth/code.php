@@ -197,8 +197,16 @@ class auth Extends mysql
     /*
      * Generate Mail Code
      */
-    public function saveVerifyCode($userid, $mailcode)
+    public function saveVerifyCode($userid)
     {
+
+        $length = 16;
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $mailCode .= $characters[random_int(0, $charactersLength - 1)];
+        }
 
         $CREATEVERIFYCODE = self::db()->prepare("UPDATE `users` set `mail_verify_code` = :mail_verify_code WHERE `id` = :userid");
         $CREATEVERIFYCODE->execute(array(":mail_verify_code" => $mailcode, ":userid" => $userid));
