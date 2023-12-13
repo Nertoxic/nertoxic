@@ -73,6 +73,10 @@ if($nic_version == NULL) {
     $console->callError(true, 'nicVerion.php', 'The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.');
 }
 
+if($nic_version < $nic_needed_version) {
+    $console->callError(true, 'nicLoader.php', 'You are not using the required Version of the Framework, take a look at https://docs.nertoxic.com/versions#support-table');
+}
+
 /* Database isnt required
 if($env['NIC_USED_DB'] == NULL) {
     $console->callError(true, 'nicLoader.php', 'The database type couldnt be loaded, check if the right value has been set inside the .env file.');
