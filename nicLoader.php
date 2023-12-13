@@ -80,7 +80,9 @@ if($nic_version_needed == NULL) {
 }
 
 if($nic_version_id < $nic_version_needed_id) {
-    $console->callError(true, 'nicLoader.php', 'You are not using the required Version of the Framework, take a look at https://docs.nertoxic.com/versions#support-table');
+    if($nicPageType == "crone") {} else {
+        $console->callError(true, 'nicLoader.php', 'You are not using the required Version of the Framework, take a look at https://docs.nertoxic.com/versions#support-table');
+    }
 }
 
 /* Database isnt required
