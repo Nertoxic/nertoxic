@@ -13,12 +13,12 @@ include '../../../nicLoader.php'; # Check if you used the correct loading folder
 if($mailCode == NULL) {
     $verifyCode = $base->randomeString(12, false);
     $mailer->sendMail($usermail, 'Mail Verification Code', 'Your verification code is: '.$verifyCode);
-    $cache->write('mailverify', '<?php $mailCode = '.$verifyCode.'; ?>');
+    $cache->write('mailverify', '<?php $mailCode = "'.$verifyCode.'"; ?>');
 }
 
 if(isset($_POST['checkCode'])) {
 
-    $checkCode = $base->verifyString($mailCode, '"'.$_POST['mailCode'].'"');
+    $checkCode = $base->verifyString($mailCode, $_POST['mailCode']);
 
     if($checkCode == true) {
         $auth->verifyMail($usermail);
