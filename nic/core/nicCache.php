@@ -11,7 +11,6 @@ class cache
     {
         $file = CACHE_PATH.$path."/data.php";
 
-        fopen($file, "w");
         fwrite($file, $data);
         fclose($file);
 
