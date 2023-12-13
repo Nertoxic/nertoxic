@@ -39,6 +39,7 @@ if ($env === false) {
     $NIC_AUTH_REDERICT_REGISTER = $env['NIC_AUTH_REDERICT_REGISTER'];
     $NIC_AUTH_FORCE_MAIL_VERIFY = $env['NIC_AUTH_FORCE_MAIL_VERIFY'];
     $NIC_AUTH_MAIL_VERIFY_PAGE = $env['NIC_AUTH_MAIL_VERIFY_PAGE'];
+    $NIC_AUTH_FORCE_MAIL_VERIFY = $env['NIC_AUTH_FORCE_MAIL_VERIFY'];
 
     // Inv variables that need to be global available
     $NIC_INV_MOLLIE_KEY = $env['NIC_INV_MOLLIE_KEY'];
