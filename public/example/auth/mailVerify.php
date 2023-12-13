@@ -10,7 +10,7 @@
 $nicPageType = "mailverify"; # Use front for loading the frontend css/js and back to load the backend css/js
 include '../../../nicLoader.php'; # Check if you used the correct loading folder
 
-if($mailCode == NULL) {
+if($mailcode == NULL) {
     if($usermail_verified == 'false') {
         $verifyCode = $base->randomeString(12, false);
         $auth->generateVerifyMail($userid, $verifyCode);
@@ -20,7 +20,7 @@ if($mailCode == NULL) {
 
 if(isset($_POST['checkCode'])) {
 
-    $checkCode = $base->verifyString($mailCode, $_POST['mailCode']);
+    $checkCode = $base->verifyString($mailcode, $_POST['mailCode']);
 
     if($checkCode == true) {
         $auth->verifyMail($usermail);
