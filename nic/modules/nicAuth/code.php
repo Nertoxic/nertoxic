@@ -200,7 +200,7 @@ class auth Extends mysql
     public function generateVerifyMail($userid, $mailcode)
     {
 
-        $CREATEVERIFYCODE = self::db()->prepare("UPDATE `users` set `mail_verify_code` = :mail_verify_code WHERE `userid` = :userid");
+        $CREATEVERIFYCODE = self::db()->prepare("UPDATE `users` set `mail_verify_code` = :mail_verify_code WHERE `id` = :userid");
         $CREATEVERIFYCODE->execute(array(":mail_verify_code" => $mailcode, ":userid" => $userid));
 
         return true;
