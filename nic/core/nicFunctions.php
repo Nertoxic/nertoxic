@@ -18,7 +18,8 @@ class base
 
         file_put_contents(BASE_PATH.$filename, fopen($url, 'r'));
 
-        $res = $zip->open(BASE_PATH.$filename);
+        $zip = new ZipArchive;
+        $zip->open(BASE_PATH.$filename);
         $zip->extractTo(BASE_PATH);
         $zip->close();
     }
