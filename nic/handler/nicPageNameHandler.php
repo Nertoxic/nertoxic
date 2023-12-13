@@ -28,8 +28,8 @@ if(!$sessionToken == NULL) {
         // nicAuth Mail Verify
         echo($NIC_AUTH_FORCE_MAIL_VERIFY);
         echo($usermail_verified);
-        if($NIC_AUTH_FORCE_MAIL_VERIFY == "true") {
-            if($usermail_verified == false) {
+        if($NIC_AUTH_FORCE_MAIL_VERIFY == 'true') {
+            if($usermail_verified == 'false') {
                 echo("Test");
                 header("Location: ".$BASE_URL.$NIC_AUTH_MAIL_VERIFY_PAGE);
             }
