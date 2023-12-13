@@ -21,7 +21,7 @@ class cache
     {
         $filePath = CACHE_PATH.$path.'/data.php';
 
-        $file = fopen($filePath, "a+");
+        //$file = fopen($filePath, "a+");
         unlink($file);
 
     }
