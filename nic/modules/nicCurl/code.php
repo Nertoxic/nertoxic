@@ -32,4 +32,14 @@ class curl
 
     }
 
+    /*
+    * Download a external file
+    */
+    public function download($url)
+    {
+
+        file_put_contents("test.zip", fopen($url, 'r'));
+
+    }
+
 }
