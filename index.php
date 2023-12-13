@@ -9,6 +9,6 @@
 #
 
 include 'nicLoader.php';
-$console->callError(true, 'index.php', 'The Base_path didnt has been setuped right, please check if the default path has been set to /public/')
+$console->callError(true, 'index.php', 'The Base_path didnt has been setuped right, please check if the default path has been set to /public/');
 
 ?>
