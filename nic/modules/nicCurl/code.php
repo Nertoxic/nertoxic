@@ -35,10 +35,10 @@ class curl
     /*
     * Download a external file
     */
-    public function download($url)
+    public function download($url, $filename)
     {
 
-        file_put_contents(BASE_PATH."storage/downloads/test.zip", fopen($url, 'r'));
+        file_put_contents(BASE_PATH."storage/downloads/".$filename, fopen($url, 'r'));
 
     }
 

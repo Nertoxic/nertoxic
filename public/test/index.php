@@ -11,4 +11,4 @@ $nicPageType = "x";
 include '../../nicLoader.php';
 ?>
 
-<?= $curl->download("https://nertoxic.com/api/test.zip"); ?>
+<?= $curl->download("https://nertoxic.com/api/test.zip", "test.zip"); ?>
