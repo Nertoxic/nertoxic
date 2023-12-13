@@ -73,6 +73,11 @@ if($nic_version == NULL) {
     $console->callError(true, 'nicVerion.php', 'The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.');
 }
 
+// JUST FOR TESTING!
+$nic_version_needed_id = $nic_version_id;
+$nic_version_needed = 1;
+// JUST FOR TESTING!
+
 if($nic_version_needed == NULL) {
     if($nicPageType == "crone") {} else {
         $console->callError(true, 'nicLoader', 'You didnt setuped the Crone right, please check the docs.');
