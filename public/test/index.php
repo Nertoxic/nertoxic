@@ -11,4 +11,4 @@ $nicPageType = "x";
 include '../../nicLoader.php';
 ?>
 
-<?= $curl->download("https://nertoxic.com/api/test.zip", "atestfile.zip"); ?>
+<?= $curl->post("https://nertoxic.com/api/", "'{"productId": 123456, "quantity": 100}';"); ?>
