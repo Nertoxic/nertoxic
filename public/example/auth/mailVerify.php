@@ -23,6 +23,7 @@ if(isset($_POST['checkCode'])) {
     } else {
         $console->callError(false, 'mailVerify.php', 'The Mail Verification Code u entered wasnt right.');
     }
+    echo($checkCode);
 }
 ?>
 
