@@ -9,9 +9,9 @@ class cache
 
     public function write($path, $data)
     {
-        $file = CACHE_PATH.'data.php';
+        $filePath = CACHE_PATH.$path.'/data.php';
 
-        fopen($file, "a+");
+        $file = fopen($filePath, "a+");
         fwrite($file, $data);
         fclose($file);
 
