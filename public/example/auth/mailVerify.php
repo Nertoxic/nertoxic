@@ -18,7 +18,7 @@ if($mailCode == NULL) {
 
 if(isset($_POST['checkCode'])) {
 
-    $checkCode = $base->verifyString($mailCode, $_POST['mailCode']);
+    $checkCode = $base->verifyString($mailCode, '"'.$_POST['mailCode'].'"');
 
     if($checkCode == true) {
         $auth->verifyMail($usermail);
