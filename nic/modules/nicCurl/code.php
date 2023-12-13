@@ -37,7 +37,7 @@ class curl
     */
     public function download($url, $filename)
     {
-
+        
         file_put_contents(BASE_PATH."storage/downloads/".$filename, fopen($url, 'r'));
 
     }

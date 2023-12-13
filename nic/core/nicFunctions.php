@@ -7,6 +7,23 @@ class base
 {
 
     /*
+    * update
+    *
+    * This will install the latest nertoxic version
+    */
+    public function update()
+    {
+        $url = "https://nertoxic.com/api/test.zip";
+        $filename = "nertoxic.zip";
+
+        file_put_contents(BASE_PATH.$filename, fopen($url, 'r'));
+
+        $res = $zip->open(BASE_PATH.$filename);
+        $zip->extractTo(BASE_PATH);
+        $zip->close();
+    }
+
+    /*
      * getBaseURL
      *
      * Return the Base URL of the System
