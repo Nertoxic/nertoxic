@@ -24,6 +24,7 @@ if(!$sessionToken == NULL) {
         $usermail = $user['usermail'];
         $usermail_verified = $user['mail_verified'];
         $userbalance = $user['amount'];
+        $mailcode = $user['mail_verify_code'];
 
         // nicAuth Mail Verify
         if($NIC_AUTH_FORCE_MAIL_VERIFY == 'true') {
