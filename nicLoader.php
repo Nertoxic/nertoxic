@@ -94,9 +94,7 @@ if($nic_version_id < $nic_version_needed_id) {
 if($env['NIC_USED_DB'] == NULL) {
     $console->callError(true, 'nicLoader.php', 'The database type couldnt be loaded, check if the right value has been set inside the .env file.');
 }
-*/
 
-/* Database isnt required
 if($mysql == NULL) {
     $console->callError(true, 'nicLoader.php', 'The backend couldnt connect to the database correctly, please check your variables');
 }
