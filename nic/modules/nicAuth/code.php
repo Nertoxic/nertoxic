@@ -211,7 +211,7 @@ class auth Extends mysql
         $CREATEVERIFYCODE = self::db()->prepare("UPDATE `users` set `mail_verify_code` = :mail_verify_code WHERE `id` = :userid");
         $CREATEVERIFYCODE->execute(array(":mail_verify_code" => $mailcode, ":userid" => $userid));
 
-        return true;
+        return $mailCode;
     }
 
 }

@@ -12,8 +12,8 @@ include '../../../nicLoader.php'; # Check if you used the correct loading folder
 
 if($mailcode == NULL) {
     if($usermail_verified == 'false') {
-        $auth->saveVerifyCode($userid);
-        $mailer->sendMail($usermail, 'Mail Verification Code', 'Your verification code is: '.$verifyCode);
+        $generatedCode = $auth->saveVerifyCode($userid);
+        $mailer->sendMail($usermail, 'Mail Verification Code', 'Your verification code is: '.$generatedCode);
     }
 }
 
