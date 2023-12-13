@@ -18,7 +18,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $resp = curl_exec($curl);
 curl_close($curl);
 
-$cache->write('nicVersion', '<?php $nic_version_needed = '.$resp.'; ?>');
+$cache->write('nicVersion', '<?php $nic_version_needed = "'.$resp.'"; ?>');
 
 ?>
 
