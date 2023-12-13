@@ -66,7 +66,7 @@ curl_close($curl);
                             <br><br>
                             Newest Version: <?= $resp; ?>
                             <br>
-                            <a href="https://docs.nertoxic.com/update" target="_blank"><u>How to Update Nertoxic</u></a>
+                            <a href="<?= $NIC_BASE_URL; ?>nic/update" target="_blank"><u>Update now</u></a>
                         </small>
                     </small>
                 <?php } ?>
