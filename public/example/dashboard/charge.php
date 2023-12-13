@@ -12,8 +12,6 @@ include '../../../nicLoader.php'; # Check if you used the correct loading folder
 
 if(isset($_POST['chargeMoney'])) {
     $inv->startPayment($_POST['amount'], $_POST['provider'], $userid);
-    echo($_POST['amount']);
-    echo($_POST['provider']);
 }
 ?>
 

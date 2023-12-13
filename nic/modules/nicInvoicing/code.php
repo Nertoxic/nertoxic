@@ -55,7 +55,7 @@ class inv Extends mysql
     public function startPayment($amount, $provider, $userid)
     {
 
-        $paymentSuccess = false;
+        $paymentSuccess = true;
 
         if(empty($amount)) {
             $paymentSuccess = false;
