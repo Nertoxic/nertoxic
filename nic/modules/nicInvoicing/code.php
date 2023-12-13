@@ -105,6 +105,7 @@ class inv Extends mysql
             }
         }
 
+        echo($paymentFeedback);
         return $paymentSuccess;
     }
 
