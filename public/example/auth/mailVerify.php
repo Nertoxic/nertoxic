@@ -11,9 +11,11 @@ $nicPageType = "mailverify"; # Use front for loading the frontend css/js and bac
 include '../../../nicLoader.php'; # Check if you used the correct loading folder
 
 if($mailCode == NULL) {
-    $verifyCode = $base->randomeString(12, false);
-    $mailer->sendMail($usermail, 'Mail Verification Code', 'Your verification code is: '.$verifyCode);
-    $cache->write('mailverify', '<?php $mailCode = "'.$verifyCode.'"; ?>');
+    if($usermail_verified == 'false') {
+        $verifyCode = $base->randomeString(12, false);
+        $mailer->sendMail($usermail, 'Mail Verification Code', 'Your verification code is: '.$verifyCode);
+        $cache->write('mailverify', '<?php $mailCode = "'.$verifyCode.'"; ?>');
+    }
 }
 
 if(isset($_POST['checkCode'])) {
