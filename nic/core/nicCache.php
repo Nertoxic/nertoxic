@@ -17,6 +17,7 @@ class cache
 
     }
 
+    // Currently not working due to config inside open_basedir
     public function delete($path)
     {
         $filePath = CACHE_PATH.$path.'/data.php';
