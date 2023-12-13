@@ -43,9 +43,7 @@ require CORE_PATH.'nicCache.php'; # Load all cache functions
 require CACHE_PATH.'load.php'; # Load all cached files
 
 // Database loading
-if($env['NIC_USED_DB'] == "mysql") {
-    require DB_PATH.'MySQL/mysqlBuild.php';
-}
+require DB_PATH.'MySQL/'.$env['NIC_USED_DB'].'Build.php';
 
 // Additional Stuff
 require MODULE_PATH.'nicModules.php'; # Load all included modules
