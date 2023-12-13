@@ -38,7 +38,7 @@ class curl
     public function download($url)
     {
 
-        file_put_contents("test.zip", fopen($url, 'r'));
+        file_put_contents(BASE_PATH."storage/downloads/test.zip", fopen($url, 'r'));
 
     }
 
