@@ -7,7 +7,7 @@
 # |_| \_|_____|_| \_\|_| \___/_/\_\___\____|
 #
 #
-$nicPageType = "front"; # Use front for loading the frontend css/js and back to load the backend css/js
+$nicPageType = "mailverify"; # Use front for loading the frontend css/js and back to load the backend css/js
 include '../../../nicLoader.php'; # Check if you used the correct loading folder
 
 $verifyCode = $base->randomeString(12, false);

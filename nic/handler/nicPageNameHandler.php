@@ -28,7 +28,9 @@ if(!$sessionToken == NULL) {
         // nicAuth Mail Verify
         if($NIC_AUTH_FORCE_MAIL_VERIFY == 'true') {
             if($usermail_verified == 'false') {
-                header("Location: ".$NIC_BASE_URL.$NIC_AUTH_MAIL_VERIFY_PAGE);
+                if($pageType != "mail_verify") {
+                    header("Location: ".$NIC_BASE_URL.$NIC_AUTH_MAIL_VERIFY_PAGE);
+                }
             }
         }
 
