@@ -49,3 +49,7 @@ jobs:
         - name: Run Modules test
           working-directory: public/test
           run: php modules.php
+                    
+        - name: Run Cache test
+          working-directory: public/test
+          run: php cache.php
