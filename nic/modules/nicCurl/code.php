@@ -32,6 +32,9 @@ class curl
 
     }
 
+    /*
+    * Make a body post curl to an endpoint
+    */
     public function post($url, $data)
     {
 
@@ -49,6 +52,25 @@ class curl
 
         $resp = curl_exec($opt);
         curl_close($opt);
+
+        return $resp;
+
+    }
+    
+    /*
+    * Make a bearer auth to a webpage
+    */
+    public function bearer($url, $token)
+    {
+
+        $opt = curl_init($url);
+        curl_setopt($opt, CURLOPT_URL, $url);
+        curl_setopt($opt, CURLOPT_RETURNTRANSFER, true);
+        
+        $headers = array(
+           "Accept: application/json",
+           "Authorization: Bearer {".$token."}",
+        );
 
         return $resp;
 
