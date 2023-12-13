@@ -19,7 +19,7 @@ if(!$sessionToken == NULL) {
     while ($user = $USERDATA -> fetch(PDO::FETCH_ASSOC)){
 
         // nicAuth Module
-        $userid = $user['userid'];
+        $userid = $user['id'];
         $username = $user['username'];
         $usermail = $user['usermail'];
         $usermail_verified = $user['mail_verified'];
