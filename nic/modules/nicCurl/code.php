@@ -16,7 +16,7 @@ class curl
     /*
     * Create a simple get Curl request
     */
-    public function getCurl($url)
+    public function get($url)
     {
 
         $opt = curl_init($url);
