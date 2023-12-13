@@ -15,6 +15,8 @@ class cache
         fwrite($file, $data);
         fclose($file);
 
+        echo($file);
+
     }
 
 }
