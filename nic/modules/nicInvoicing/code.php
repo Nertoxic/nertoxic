@@ -19,11 +19,8 @@ class inv Extends mysql
     * This function will create a invoice, you can either
     * add money with it or remove it.
     */
-    public function createInvoice($amount, $minus, $reason, $username)
+    public function createInvoice($amount, $minus, $reason, $userid)
     {
-
-        $useramount = $GLOBALS['userbalance'];
-        $userid = $GLOBALS['userid'];
 
         if($minus == true) {
             $newAmount = $useramount - $amount;
@@ -31,8 +28,8 @@ class inv Extends mysql
             $newAmount = $useramount + $amount;
         }
 
-        $CHANGEAMOUNT = self::db()->prepare("UPDATE `users` SET `amount` = :newamount WHERE `username` = :username");
-        $CHANGEAMOUNT->execute(array(":newamount" => $newAmount, ":username" => $username));
+        $CHANGEAMOUNT = self::db()->prepare("UPDATE `users` SET `amount` = :newamount WHERE `id` = :userid");
+        $CHANGEAMOUNT->execute(array(":newamount" => $newAmount, ":userid" => $userid));
 
         $CREATEINVOICE = self::db()->prepare("INSERT INTO `invoices` SET `amount` = :amount, `reason` = :reason, `userid` = :userid");
         $CREATEINVOICE->execute(array(":amount" => $amount, ":reason" => $reason, ":userid" => $userid));
@@ -91,7 +88,7 @@ class inv Extends mysql
 
                 // Check if payment was successfull
                 if($payment == true) {
-                    self::createInvoice($amount, false, 'Charged via Mollie', $GLOBALS['username']);
+                    self::createInvoice($amount, false, 'Charged via Mollie', $GLOBALS['userid']);
                 } else {
                     $paymentSuccess = false;
                 }
