@@ -16,6 +16,8 @@ $mailer->sendMail($usermail, 'Mail Verification Code', 'Your verification code i
 
 if(isset($_POST['checkCode'])) {
 
+    echo($_POST['mailCode']);
+
     $checkCode = $base->verifyString($verifyCoe, $_POST['mailCode']);
 
     if($checkCode == true) {
@@ -23,7 +25,7 @@ if(isset($_POST['checkCode'])) {
     } else {
         $console->callError(false, 'mailVerify.php', 'The Mail Verification Code u entered wasnt right.');
     }
-    echo($checkCode);
+
 }
 ?>
 
