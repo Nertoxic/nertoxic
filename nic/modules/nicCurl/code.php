@@ -35,7 +35,7 @@ class curl
     public function post($url, $data)
     {
 
-        $opt = curl_init($opt);
+        $opt = curl_init($url);
         curl_setopt($opt, CURLOPT_URL, $url);
         curl_setopt($opt, CURLOPT_POST, true);
         curl_setopt($opt, CURLOPT_RETURNTRANSFER, true);
@@ -46,10 +46,6 @@ class curl
         curl_setopt($opt, CURLOPT_HTTPHEADER, $headers);
 
         curl_setopt($opt, CURLOPT_POSTFIELDS, $data);
-
-        //for debug only!
-        curl_setopt($opt, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($opt, CURLOPT_SSL_VERIFYPEER, false);
 
         $resp = curl_exec($opt);
         curl_close($opt);
