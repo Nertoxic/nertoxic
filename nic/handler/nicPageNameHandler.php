@@ -28,8 +28,10 @@ if(!$sessionToken == NULL) {
         // nicAuth Mail Verify
         if($NIC_AUTH_FORCE_MAIL_VERIFY == 'true') {
             if($usermail_verified == 'false') {
+                echo($GET['re']);
                 if($GET['re'] == "yes") {} else {
-                    header("Location: ".$NIC_BASE_URL.$NIC_AUTH_MAIL_VERIFY_PAGE."?re=yes");
+                    echo("yeee");
+                    //header("Location: ".$NIC_BASE_URL.$NIC_AUTH_MAIL_VERIFY_PAGE."?re=yes");
                 }
             }
         }
