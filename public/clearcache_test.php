@@ -11,4 +11,4 @@ $nicPageType = "test";
 include '../nicLoader.php';
 ?>
 
-<?php $cache->delete(); ?>
+<?php $cache->delete('temp'); ?>
