@@ -17,3 +17,4 @@ if(strpos($currPage,'front_') !== false) {
 
 if(strpos($currPage,'auth_') !== false) {
     echo("Working");
+}
