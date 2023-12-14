@@ -9,7 +9,7 @@
 #
 
 $currPage = 'front_404';
-require_once BASE_PATH.'nic/hanlder/nicPageHandler.php';
+require_once BASE_PATH.'nic/handler/nicPageHandler.php';
 ?>
 
 404

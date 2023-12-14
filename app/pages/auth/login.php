@@ -9,7 +9,7 @@
 #
 
 $currPage = 'auth_login';
-require_once BASE_PATH.'nic/hanlder/nicPageHandler.php';
+require_once BASE_PATH.'nic/handler/nicPageHandler.php';
 ?>
 
 
