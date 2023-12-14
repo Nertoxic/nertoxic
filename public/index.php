@@ -19,8 +19,3 @@
 include_once '../nicLoader.php';
 
 ?>
-
-<?php if($env['APP_DISPLAY_ERROR'] == 'true') { ?>
-<br><br>
-<?php $ini_set('display_errors', 'On'); ?>
-<?php } ?>
