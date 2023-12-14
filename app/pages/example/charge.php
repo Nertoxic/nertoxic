@@ -7,8 +7,7 @@
 # |_| \_|_____|_| \_\|_| \___/_/\_\___\____|
 #
 #
-$nicPageType = "back"; # Use front for loading the frontend css/js and back to load the backend css/js
-include '../../../nicLoader.php'; # Check if you used the correct loading folder
+$currPage = "back_charge";
 
 if(isset($_POST['chargeMoney'])) {
     $inv->startPayment($_POST['amount'], $_POST['provider'], $userid);

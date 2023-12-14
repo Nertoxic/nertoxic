@@ -21,6 +21,7 @@
 
     # Dashboard Routing
     RewriteRule ^dashboard?$ index.php?page=example/dashboard [L]
+    RewriteRule ^dashboard/charge?$ index.php?page=example/charge [L]
 
 </IfModule>
 <Files 403.shtml>
