@@ -24,6 +24,7 @@ require_once BASE_PATH.'nic/handler/nicPageHandler.php';
 </small>
 
 <br><br>
+<?= $_POST['username']; ?>
 
 <form method="POST">
 <input name="username" placeholder="Username"></input> <br>
