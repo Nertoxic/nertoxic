@@ -8,7 +8,7 @@
 #
 #
 
-$date = new DateTime(1, new DateTimeZone('Europe/Berlin'));
+$date = new DateTime(0, new DateTimeZone('Europe/Berlin'));
 $datetime = $date->format('Y-m-d H:i:s');
 
 ?>
