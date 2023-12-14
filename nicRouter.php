@@ -14,8 +14,8 @@ if(isset($_GET['page'])) {
 
     }
 
-    if(strpos($currPage,'system_') !== false || strpos($currPage,'_hidelayout') !== false) {} else {
-        include BASE_PATH.'/resources/additional/footer.php';
+    if(strpos($currPage,'auth_') == true) {
+        include BASE_PATH.'storage/assets/auth/footer.php';
     }
 
 } else {
