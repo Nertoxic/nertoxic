@@ -65,6 +65,9 @@ require BASE_PATH.'nicRouter.php'; # Load the router
 # Error handling
 # --------------------------------------------------------------------
 
+ob_start();
+session_start();
+
 if (version_compare(PHP_VERSION, $neededPHPVersion, '<')) {
     $console->callError(true, 'nicLoader.php', 'The Nertoxic Framework couldnt be loaded, you need at least the PHP Version '.$neededPHPVersion);
 }
