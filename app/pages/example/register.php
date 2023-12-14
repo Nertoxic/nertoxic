@@ -9,7 +9,6 @@
 #
 
 $currPage = 'auth_register';
-require_once BASE_PATH.'nic/handler/nicPageHandler.php';
 ?>
 
 <h1> Register Example Page </h1>

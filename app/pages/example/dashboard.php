@@ -9,7 +9,6 @@
 #
 
 $currPage = 'back_dashboard';
-require_once BASE_PATH.'nic/handler/nicPageHandler.php';
 ?>
 
 <?= $username; ?>

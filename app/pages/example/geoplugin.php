@@ -9,7 +9,6 @@
 #
 
 $currPage = 'front_geoplugin';
-require_once BASE_PATH.'nic/handler/nicPageHandler.php';
 ?>
 
 <?php 
