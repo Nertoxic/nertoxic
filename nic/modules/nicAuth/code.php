@@ -38,7 +38,7 @@ class auth Extends mysql
         }
 
         // Check if the email is already in use
-        $MAILUSED = self::db()->prepare("SELECT * FROM `users` WHERE `usermail` = :usermail");
+        $MAILUSED = self::db()->prepare("SELECT * FROM `".$NIC_AUTH_DATABASE."` WHERE `usermail` = :usermail");
         $MAILUSED->execute(array(
             ":usermail" => $usermail
         ));
@@ -49,7 +49,7 @@ class auth Extends mysql
         }
 
         // Check if the username is already in use
-        $NAMEUSED = self::db()->prepare("SELECT * FROM `users` WHERE `username` = :username");
+        $NAMEUSED = self::db()->prepare("SELECT * FROM `".$NIC_AUTH_DATABASE."` WHERE `username` = :username");
         $NAMEUSED->execute(array(
             ":username" => $username
         ));
@@ -64,7 +64,7 @@ class auth Extends mysql
 
             $password_en = password_hash($password, PASSWORD_DEFAULT);
 
-            $CREATE_USER = self::db()->prepare("INSERT INTO `users` SET `username` = :username, `usermail` = :usermail, `password` = :password");
+            $CREATE_USER = self::db()->prepare("INSERT INTO `".$NIC_AUTH_DATABASE."` SET `username` = :username, `usermail` = :usermail, `password` = :password");
             $CREATE_USER->execute(array(
                 ":username" => $username,
                 ":usermail" => $usermail,
@@ -106,7 +106,7 @@ class auth Extends mysql
         }
 
         // Get user Data
-        $LOGINUSER = self::db()->prepare("SELECT * FROM `users` WHERE `username` = :username");
+        $LOGINUSER = self::db()->prepare("SELECT * FROM `".$NIC_AUTH_DATABASE."` WHERE `username` = :username");
         $LOGINUSER->execute(array(":username" => $username));
         while ($user = $LOGINUSER -> fetch(PDO::FETCH_ASSOC)){
 
@@ -140,7 +140,7 @@ class auth Extends mysql
                 $sessiontoken .= $characters[random_int(0, $charactersLength - 1)];
             }
 
-            $INSERTSESS = self::db()->prepare("UPDATE `users` SET `session` = :sesstoken WHERE `username` = :username");
+            $INSERTSESS = self::db()->prepare("UPDATE `".$NIC_AUTH_DATABASE."` SET `session` = :sesstoken WHERE `username` = :username");
             $INSERTSESS->execute(array(":sesstoken" => $sessiontoken, ":username" => $username));
 
             setcookie('SESS', $sessiontoken, time()+'864000', '/');
@@ -188,7 +188,7 @@ class auth Extends mysql
     public function verifyMail($usermail)
     {
 
-        $VERIFYMAIL = self::db()->prepare("UPDATE `users` set `mail_verified` = 'true' WHERE `usermail` = :usermail");
+        $VERIFYMAIL = self::db()->prepare("UPDATE `".$NIC_AUTH_DATABASE."` set `mail_verified` = 'true' WHERE `usermail` = :usermail");
         $VERIFYMAIL->execute(array(":usermail" => $usermail));
 
         return true;
@@ -208,7 +208,7 @@ class auth Extends mysql
             $generatedCode .= $characters[random_int(0, $charactersLength - 1)];
         }
 
-        $CREATEVERIFYCODE = self::db()->prepare("UPDATE `users` set `mail_verify_code` = :mail_verify_code WHERE `id` = :userid");
+        $CREATEVERIFYCODE = self::db()->prepare("UPDATE `".$NIC_AUTH_DATABASE."` set `mail_verify_code` = :mail_verify_code WHERE `id` = :userid");
         $CREATEVERIFYCODE->execute(array(":mail_verify_code" => $generatedCode, ":userid" => $userid));
 
         return $generatedCode;
