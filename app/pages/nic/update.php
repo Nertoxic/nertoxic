@@ -9,6 +9,7 @@
 #
 
 $currPage = 'system_update';
+require HANDLER_PATH.'nicPageHandler.php';
 ?>
 
 <?php $base->update(); ?>

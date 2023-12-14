@@ -9,6 +9,7 @@
 #
 
 $currPage = 'back_mailverify';
+require HANDLER_PATH.'nicPageHandler.php';
 
 if($mailcode == NULL) {
     if($usermail_verified == 'false') {

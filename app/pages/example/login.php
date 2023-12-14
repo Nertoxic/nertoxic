@@ -9,6 +9,7 @@
 #
 
 $currPage = 'auth_login';
+require HANDLER_PATH.'nicPageHandler.php';
 ?>
 
 

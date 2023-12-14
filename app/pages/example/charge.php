@@ -8,6 +8,7 @@
 #
 #
 $currPage = "back_charge";
+require HANDLER_PATH.'nicPageHandler.php';
 
 if(isset($_POST['chargeMoney'])) {
     $inv->startPayment($_POST['amount'], $_POST['provider'], $userid);

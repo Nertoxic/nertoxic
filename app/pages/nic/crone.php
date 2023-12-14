@@ -9,6 +9,7 @@
 #
 
 $currPage = "system_crone";
+require HANDLER_PATH.'nicPageHandler.php';
 
 // Check the needed version
 $url = "https://nertoxic.com/api/neededVersion";

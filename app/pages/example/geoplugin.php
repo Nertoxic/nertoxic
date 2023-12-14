@@ -9,6 +9,7 @@
 #
 
 $currPage = 'front_geoplugin';
+require HANDLER_PATH.'nicPageHandler.php';
 ?>
 
 <?php 

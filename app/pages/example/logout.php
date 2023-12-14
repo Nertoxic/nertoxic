@@ -9,6 +9,7 @@
 #
 
 $currPage = 'front_logout';
+require HANDLER_PATH.'nicPageHandler.php';
 ?>
 
 <?php $auth->logout($sessionToken); ?>

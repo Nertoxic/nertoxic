@@ -9,6 +9,7 @@
 #
 
 $currPage = 'front_index';
+require HANDLER_PATH.'nicPageHandler.php';
 ?>
 
 Welcome!

@@ -8,6 +8,7 @@
 #
 #
 $currPage = "system_version";
+require HANDLER_PATH.'nicPageHandler.php';
 
 $url = "https://nertoxic.com/api/newestVersion";
 $curl = curl_init($url);
