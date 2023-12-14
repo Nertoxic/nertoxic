@@ -34,22 +34,6 @@ jobs:
         - name: Composer installation
           run: composer update
 
-        - name: Run Database test
-          working-directory: public/test
-          run: php database.php
-
-        - name: Run Framework test
-          working-directory: public/test
-          run: php framework.php
-
-        - name: Run Mailer test
-          working-directory: public/test
-          run: php mailer.php
-          
-        - name: Run Modules test
-          working-directory: public/test
-          run: php modules.php
-                    
-        - name: Run Cache test
-          working-directory: public/test
-          run: php cache.php
+        - name: Run PHP Test
+          working-directory: public/
+          run: php index.php
