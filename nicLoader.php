@@ -52,9 +52,6 @@ require MODULE_PATH.'nicModules.php'; # Load all included modules
 require SECURITY_PATH.'nicSecurity.php'; # Load the Security functions
 require CORE_PATH.'nicFunctions.php'; # Load the Security functions
 
-// Routing Stuff
-require BASE_PATH.'nicRouter.php'; # Load the router
-
 } catch (Exception $e) {
     $nicCon->callError(true, 'nicLoader.php', 'There was an error while loading the loader.');
 }
@@ -101,4 +98,10 @@ if($mysql == NULL) {
     $console->callError(true, 'nicLoader.php', 'The backend couldnt connect to the database correctly, please check your variables');
 }
 */
+
+# --------------------------------------------------------------------
+# Load the Page now
+# --------------------------------------------------------------------
+
+require BASE_PATH.'nicRouter.php'; # Load the router
 ?>
