@@ -20,7 +20,7 @@ try {
 #error_reporting(E_ALL ^ E_WARNING && E_NOTICE); // Set own error reporting
 include_once '../nicLoader.php';
 
-} catch (Exception $e) {
+} catch (\Throwable $e) {
     print_r($e);
 }
 
