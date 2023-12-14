@@ -16,8 +16,11 @@ if(isset($_GET['page'])) {
     /*
     * Include requested page
     */
-    include(BASE_PATH."app/pages/auth/".$_GET['page'].".php");
+    include(BASE_PATH."app/pages/".$_GET['page'].".php");
 
+    /*
+    * If page doesnt respond the right code
+    */
     if($currPage == NULL) {
         $console->callError(true, 'nicRouter.php', 'The file couldnt be loaded correctly.');
     }
