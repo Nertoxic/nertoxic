@@ -6,6 +6,7 @@
 
 	# Index Routing
 	RewriteRule ^/?$ index.php?page=example/index [L]
+    RewriteRule ^geoplugin?$ index.php?page=example/geoplugin [L]
 
     # Auth Routing
     RewriteRule ^login?$ index.php?page=example/login [L]
