@@ -12,8 +12,9 @@
 # load user table
 # --------------------------------------------------------------------
 
+if($sessionToken == NULL) else {} {
 
-    $USERDATA = $mysql->db()->prepare("SELECT * FROM `users` WHERE `session` = :session");
+    $USERDATA = $mysql->db()->prepare("SELECT * FROM `".$NIC_AUTH_DATABASE."` WHERE `session` = :session");
     $USERDATA->execute(array(":session" => $sessionToken));
     while ($user = $USERDATA -> fetch(PDO::FETCH_ASSOC)){
 
@@ -38,7 +39,7 @@
 
     }
 
-
+}
 
 # --------------------------------------------------------------------
 # load html stuff
