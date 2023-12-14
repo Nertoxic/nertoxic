@@ -29,6 +29,10 @@ if(isset($_POST['checkCode'])) {
     }
 
 }
+
+if($usermail_verified == true) {
+    header("Location:".$NIC_BASE_URL);
+}
 ?>
 
 
