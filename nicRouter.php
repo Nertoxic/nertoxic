@@ -12,14 +12,11 @@ $pages = BASE_PATH.'app/pages/';
 $auth = $pages.'auth/';
 
 if(isset($_GET['page'])) {
-    switch ($page) {
 
     /*
     * Include requested page
     */
-        default: include(BASE_PATH."app/pages/".$_GET['page'].".php"); break;
-
-    }
+    include(BASE_PATH."app/pages/".$_GET['page'].".php");
 
     /*
     * If page doesnt respond the right code
