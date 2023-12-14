@@ -4,7 +4,7 @@
  * page manager
  */
 $pages = BASE_PATH.'app/pages/';
-$auth = BASE_PATH.'app/pages/auth/'
+$auth = BASE_PATH.'app/pages/auth/';
 
 if(isset($_GET['page'])) {
     switch ($page) {
