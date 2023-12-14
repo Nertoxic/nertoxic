@@ -82,13 +82,13 @@ $nic_version_needed = 1;
 // JUST FOR TESTING!
 
 if($nic_version_needed == NULL) {
-    if($nicPageType == "crone") {} else {
+    if($currPage == "system_crone") {} else {
         $console->callError(true, 'nicLoader', 'You didnt setuped the Crone right, please check the docs.');
     }
 }
 
 if($nic_version_id < $nic_version_needed_id) {
-    if($nicPageType == "crone") {} else {
+    if($currPage == "system_crone") {} else {
         $console->callError(true, 'nicLoader.php', 'You are not using the required Version of the Framework, take a look at https://docs.nertoxic.com/versions#support-table');
     }
 }
