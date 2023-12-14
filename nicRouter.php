@@ -11,14 +11,16 @@ $page = $_GET['page'];
 $pages = BASE_PATH.'app/pages/';
 $auth = $pages.'auth/';
 
-$console->callError(true, "nicRoter.php", "The Router couldnt be loaded, please enable .httaccess or check it for errors");
-
 if(isset($_GET['page'])) {
 
     /*
     * Include requested page
     */
     include(BASE_PATH."app/pages/auth/".$_GET['page'].".php");
+
+    if($currPage == NULL) {
+        include(BASE_PATH."nic/out/404.html");
+    }
 
     /*
     * Include different footers
