@@ -1,4 +1,4 @@
-<?php 
+<?php
 #
 #  _   _ _____ ____ _____ _____  _____ ____ 
 # | \ | | ____|  _ \_   _/ _ \ \/ /_ _/ ___|
@@ -8,13 +8,8 @@
 #
 #
 
-/*
- * Check if page is front_
- */
-if(strpos($currPage,'front_') !== false) {
-    # Nothing
-}
+$currPage = 'auth_login';
+require_once BASE_PATH.'nic/handler/nicPageHandler.php';
+?>
 
-if(strpos($currPage,'auth_') !== false) {
-    # Nothing
-}
+test
