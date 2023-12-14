@@ -5,12 +5,6 @@
 */
 $page = $_GET['page'];
 
-/*
- * Setup paths
- */
-$pages = BASE_PATH.'app/pages/';
-$auth = $pages.'auth/';
-
 if(isset($_GET['page'])) {
 
     /*
