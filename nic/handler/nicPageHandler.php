@@ -12,6 +12,8 @@
 # load user table
 # --------------------------------------------------------------------
 
+$sessionToken = $_COOKIE['SESS'];
+
 if(!$sessionToken == NULL) {
 
     $USERDATA = $mysql->db()->prepare("SELECT * FROM `".$NIC_AUTH_DATABASE."` WHERE `session` = :session");
