@@ -1,7 +1,12 @@
 <?php
 
 /*
- * page manager
+* Setup base values
+*/
+$page = $_GET['page'];
+
+/*
+ * Setup paths
  */
 $pages = BASE_PATH.'app/pages/';
 $auth = $pages.'auth/';
