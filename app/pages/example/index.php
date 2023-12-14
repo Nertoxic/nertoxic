@@ -8,27 +8,8 @@
 #
 #
 
-$currPage = 'auth_login';
+$currPage = 'front_index';
 require_once BASE_PATH.'nic/handler/nicPageHandler.php';
 ?>
 
-
-<h1> Login Example Page </h1>
-<br>
-<small>
-    <?php
-    if(isset($_POST['login'])) {
-        $auth->login($_POST['username'], $_POST['password']);
-    }
-    ?>
-</small>
-
-<br><br>
-
-<form method="POST">
-<?= $_POST['username']; ?>
-<input name="username" placeholder="Username"></input> <br>
-<input name="password" placeholder="Password"></input> <br>
-
-<button name="login" type="submit">Login</button>
-</form>
+Welcome!

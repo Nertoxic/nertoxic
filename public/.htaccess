@@ -9,7 +9,7 @@
 
     # Auth Routing
     RewriteRule ^login?$ index.php?page=example/login [L]
-    RewriteRule ^login?$ index.php?page=example/register [L]
+    RewriteRule ^register?$ index.php?page=example/register [L]
     RewriteRule ^logout?$ index.php?page=example/logout [L]
 
     # Dashboard Routing
