@@ -12,4 +12,4 @@ $currPage = 'front_index';
 require HANDLER_PATH.'nicPageHandler.php';
 ?>
 
-<?= $curl->get("https://nertoxic.com"); ?>
+Welcome!
