@@ -14,7 +14,9 @@
 
 if(!$sessionToken == NULL) {
 
-    $USERDATA = $mysql->db()->prepare("SELECT * FROM `users` WHERE `session` = :session");
+    $table1 = "users";
+
+    $USERDATA = $mysql->db()->prepare("SELECT * FROM `".$table1."` WHERE `session` = :session");
     $USERDATA->execute(array(":session" => $sessionToken));
     while ($user = $USERDATA -> fetch(PDO::FETCH_ASSOC)){
 
