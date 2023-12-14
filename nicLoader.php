@@ -51,6 +51,9 @@ require SECURITY_PATH.'nicSecurity.php'; # Load the Security functions
 require CORE_PATH.'nicFunctions.php'; # Load the Security functions
 require HANDLER_PATH.'nicPageNameHandler.php'; # Manage page Namens
 
+// Routing Stuff
+require BASE_PATH.'nicRouter.php'; # Load the router
+
 } catch (Exception $e) {
     $nicCon->callError(true, 'nicLoader.php', 'There was an error while loading the loader.');
 }

@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine on
+    RewriteBase /
+
+	#auth
+	RewriteRule ^index?$ index.php?page=auth_login [L]
+
+</IfModule>
+<Files 403.shtml>
+    order allow,deny
+    allow from all
+</Files>
