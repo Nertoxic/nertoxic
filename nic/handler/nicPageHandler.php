@@ -12,7 +12,6 @@
 # load user table
 # --------------------------------------------------------------------
 
-if($sessionToken == NULL) else {} {
 
     $USERDATA = $mysql->db()->prepare("SELECT * FROM `".$NIC_AUTH_DATABASE."` WHERE `session` = :session");
     $USERDATA->execute(array(":session" => $sessionToken));
@@ -39,7 +38,7 @@ if($sessionToken == NULL) else {} {
 
     }
 
-}
+
 
 # --------------------------------------------------------------------
 # load html stuff
