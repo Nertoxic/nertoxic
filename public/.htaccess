@@ -4,12 +4,14 @@
     RewriteEngine on
     RewriteBase /
 
-    # Nic Routing [!DONT REMOVE!]
+    # [!ONLY REMOVE IF YOU KNOW HOW TO REBUILD OR REPLACE!]
+    # Nic Routing
     RewriteRule ^nic/update?$ index.php?page=nic/update [L]
     RewriteRule ^nic/crone?$ index.php?page=nic/update [L]
     RewriteRule ^nic/version?$ index.php?page=nic/version [L]
+    # [!ONLY REMOVE IF YOU KNOW HOW TO REBUILD OR REPLACE!]
 
-	# Index Routing
+	# Front Routing
 	RewriteRule ^/?$ index.php?page=example/index [L]
     RewriteRule ^geoplugin?$ index.php?page=example/geoplugin [L]
 
@@ -19,7 +21,7 @@
     RewriteRule ^logout?$ index.php?page=example/logout [L]
     RewriteRule ^mailverify?$ index.php?page=example/mailverify [L]
 
-    # Dashboard Routing
+    # Back Routing
     RewriteRule ^dashboard?$ index.php?page=example/dashboard [L]
     RewriteRule ^dashboard/charge?$ index.php?page=example/charge [L]
 
