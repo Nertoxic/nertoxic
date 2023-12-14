@@ -12,8 +12,8 @@
 # Load the Framework
 # --------------------------------------------------------------------
 
-error_reporting(E_ALL);
-#error_reporting(E_ALL ^ E_WARNING && E_NOTICE);
+#error_reporting(E_ALL);
+error_reporting(E_ALL ^ E_WARNING && E_NOTICE);
 ini_set('display_errors', 'On'); // ONLY USE IN DEV ENVOIREMENT
 
 include_once '../nicLoader.php';
