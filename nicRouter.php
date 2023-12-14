@@ -21,7 +21,7 @@ if(isset($_GET['page'])) {
     }
     */
 
-    include(BASE_PATH."app/pages/auth/".$_GET['page'].".php");  break;
+    include(BASE_PATH."app/pages/auth/".$_GET['page'].".php");
 
     if(strpos($currPage,'auth_') == true) {
         include BASE_PATH.'storage/assets/auth/footer.php';
