@@ -12,3 +12,5 @@ $currPage = 'back_dashboard';
 ?>
 
 <?= $username; ?>
+<br>
+<?= $sessionToken; ?>
