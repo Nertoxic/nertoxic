@@ -18,9 +18,7 @@ session_start();
 $nicConsoleErrorFile = 0;
 $neededPHPVersion = '8.1';
 
-if(isset($_COOKIE['SESS'])) {
-    $sessionToken = NULL;
-} else {
+if(!isset($_COOKIE['SESS'])) {
     $sessionToken = $_COOKIE['SESS'];
 }
 
