@@ -12,9 +12,9 @@
 # Load the Framework
 # --------------------------------------------------------------------
 
+error_reporting(E_ALL);
 try {
 
-error_reporting(E_ALL);
 #ini_set('display_errors', 'On');
 
 #error_reporting(E_ALL ^ E_WARNING && E_NOTICE); // Set own error reporting
