@@ -11,22 +11,30 @@ $page = $_GET['page'];
 $pages = BASE_PATH.'app/pages/';
 $auth = $pages.'auth/';
 
+$console->callError(true, "nicRoter.php", "The Router couldnt be loaded, please enable .httaccess or check it for errors");
+
 if(isset($_GET['page'])) {
+
     /*
-    switch ($page) {
-
-        default: include($pages . "404.php");  break;
-        case "auth_login": include(BASE_PATH."app/pages/auth/login.php");  break;
-
-    }
+    * Include requested page
     */
-
     include(BASE_PATH."app/pages/auth/".$_GET['page'].".php");
+
+    /*
+    * Include different footers
+    */
+    if(strpos($currPage,'front_') == true) {
+        include BASE_PATH.'storage/assets/front/footer.php';
+    }
+
+    if(strpos($currPage,'back_') == true) {
+        include BASE_PATH.'storage/assets/back/footer.php';
+    }
 
     if(strpos($currPage,'auth_') == true) {
         include BASE_PATH.'storage/assets/auth/footer.php';
     }
 
 } else {
-    die('please enable .htaccess on your server');
+    $console->callError(true, "nicRoter.php", "The Router couldnt be loaded, please enable .httaccess or check it for errors");
 }
