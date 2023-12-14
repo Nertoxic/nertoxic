@@ -8,13 +8,54 @@
 #
 #
 
-/*
- * Check if page is front_
- */
+# --------------------------------------------------------------------
+# load user table
+# --------------------------------------------------------------------
+
+if(!$sessionToken == NULL) {
+
+    $USERDATA = $mysql->db()->prepare("SELECT * FROM `".$NIC_AUTH_DATABASE."` WHERE `session` = :session");
+    $USERDATA->execute(array(":session" => $sessionToken));
+    while ($user = $USERDATA -> fetch(PDO::FETCH_ASSOC)){
+
+        // nicAuth Module
+        $userid = $user['id'];
+        $username = $user['username'];
+        $usermail = $user['usermail'];
+        $usermail_verified = $user['mail_verified'];
+        $userbalance = $user['amount'];
+        $mailcode = $user['mail_verify_code'];
+
+        // nicAuth Mail Verify
+        if($NIC_AUTH_FORCE_MAIL_VERIFY == 'true') {
+            if($usermail_verified == 'false') {
+                if($_GET['re'] == "yes") {} else {
+                    header("Location: ".$NIC_BASE_URL.$NIC_AUTH_MAIL_VERIFY_PAGE."?re=yes");
+                }
+            }
+        }
+
+        // nicInvoicing
+
+    }
+
+}
+
+# --------------------------------------------------------------------
+# load html stuff
+# --------------------------------------------------------------------
+
 if(strpos($currPage,'front_') !== false) {
-    # Nothing
+    include ASSETS.'front/head.php';
+    include ASSETS.'front/header.php';
 }
 
 if(strpos($currPage,'auth_') !== false) {
-    # Nothing
+    include ASSETS.'auth/head.php';
+    include ASSETS.'auth/header.php';
+}
+
+if(strpos($currPage,'back_') !== false) {
+    include ASSETS.'back/head.php';
+    include ASSETS.'back/header.php';
 }

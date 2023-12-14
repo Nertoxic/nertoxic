@@ -49,7 +49,6 @@ require DB_PATH.'MySQL/'.$env['NIC_USED_DB'].'Build.php';
 require MODULE_PATH.'nicModules.php'; # Load all included modules
 require SECURITY_PATH.'nicSecurity.php'; # Load the Security functions
 require CORE_PATH.'nicFunctions.php'; # Load the Security functions
-#require HANDLER_PATH.'nicPageNameHandler.php'; # Manage page Namens
 
 // Routing Stuff
 require BASE_PATH.'nicRouter.php'; # Load the router

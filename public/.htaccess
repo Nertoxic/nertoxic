@@ -4,7 +4,7 @@
     RewriteBase /
 
 	#auth
-	RewriteRule ^/?$ index.php?page=auth/login [L]
+	RewriteRule ^/?$ index.php?page=example/login [L]
 
 </IfModule>
 <Files 403.shtml>
