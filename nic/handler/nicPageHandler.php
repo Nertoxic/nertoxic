@@ -53,7 +53,7 @@ if(strpos($currPage,'front_') !== false) {
 if(strpos($currPage,'auth_') !== false) {
 
     if($sessionToken ==! NULL) {
-        header(Location: $NIC_BASE_URL);
+        header("Location:".$NIC_BASE_URL);
     }
 
     include ASSETS.'auth/head.php';
@@ -63,7 +63,7 @@ if(strpos($currPage,'auth_') !== false) {
 if(strpos($currPage,'back_') !== false) {
 
     if($sessionToken == NULL) {
-        header(Location: $NIC_BASE_URL);
+        header("Location:".$NIC_BASE_URL);
     }
 
     include ASSETS.'back/head.php';
