@@ -17,10 +17,7 @@ session_start();
 
 $nicConsoleErrorFile = 0;
 $neededPHPVersion = '8.1';
-
-if(!isset($_COOKIE['SESS'])) {
-    $sessionToken = $_COOKIE['SESS'];
-}
+$sessionToken = $_COOKIE['SESS'];
 
 define('BASE_PATH', __DIR__.'/');
 define('CORE_PATH', __DIR__.'/nic/core/');
