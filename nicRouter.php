@@ -17,7 +17,7 @@ if(isset($_GET['page'])) {
     /*
     * Include requested page
     */
-        include(BASE_PATH."app/pages/".$_GET['page'].".php");
+        default: include(BASE_PATH."app/pages/".$_GET['page'].".php"); break;
 
     }
 
