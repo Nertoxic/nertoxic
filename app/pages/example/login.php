@@ -29,5 +29,5 @@ require_once BASE_PATH.'nic/handler/nicPageHandler.php';
 <input name="username" placeholder="Username"></input> <br>
 <input name="password" placeholder="Password"></input> <br>
 
-<button name="login">Login</button>
+<button name="login" type="submit">Login</button>
 </form>
