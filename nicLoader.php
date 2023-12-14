@@ -8,7 +8,6 @@
 #
 #
 
-define('SYSTEM_START', microtime(true));
 ob_start();
 session_start();
 
@@ -107,6 +106,4 @@ if($mysql == NULL) {
     $console->callError(true, 'nicLoader.php', 'The backend couldnt connect to the database correctly, please check your variables');
 }
 */
-
-define('SYSTEM_END', round(microtime(true) - SYSTEM_START,4));
 ?>
