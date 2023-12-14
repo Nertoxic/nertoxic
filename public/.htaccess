@@ -4,6 +4,11 @@
     RewriteEngine on
     RewriteBase /
 
+    # Nic Routing [!DONT REMOVE!]
+    RewriteRule ^nic/update?$ index.php?page=nic/update [L]
+    RewriteRule ^nic/crone?$ index.php?page=nic/update [L]
+    RewriteRule ^nic/version?$ index.php?page=nic/version [L]
+
 	# Index Routing
 	RewriteRule ^/?$ index.php?page=example/index [L]
     RewriteRule ^geoplugin?$ index.php?page=example/geoplugin [L]

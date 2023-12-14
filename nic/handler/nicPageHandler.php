@@ -45,11 +45,17 @@ if(!$sessionToken == NULL) {
 # load html stuff
 # --------------------------------------------------------------------
 
+/*
+* Load the front page
+*/
 if(strpos($currPage,'front_') !== false) {
     include ASSETS.'front/head.php';
     include ASSETS.'front/header.php';
 }
 
+/*
+* Load the auth page
+*/
 if(strpos($currPage,'auth_') !== false) {
 
     if($sessionToken ==! NULL) {
@@ -60,6 +66,9 @@ if(strpos($currPage,'auth_') !== false) {
     include ASSETS.'auth/header.php';
 }
 
+/*
+* Load the back page
+*/
 if(strpos($currPage,'back_') !== false) {
 
     if($sessionToken == NULL) {
