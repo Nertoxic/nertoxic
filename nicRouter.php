@@ -10,7 +10,7 @@ if(isset($_GET['page'])) {
     switch ($page) {
 
         default: include($pages . "404.php");  break;
-        case "auth_login": include($auth . "login.php");  break;
+        case "auth_login": include(BASE_PATH."app/pages/auth/login.php");  break;
 
     }
 

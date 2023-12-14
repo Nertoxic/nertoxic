@@ -21,7 +21,7 @@ require_once BASE_PATH.'nic/hanlder/nicPageHandler.php';
         $auth->login($_POST['username'], $_POST['password']);
     }
     ?>
-</s,aöö>
+</small>
 
 <br><br>
 
