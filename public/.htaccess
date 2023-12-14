@@ -1,10 +1,18 @@
 <IfModule mod_rewrite.c>
 
+    # Settings
     RewriteEngine on
     RewriteBase /
 
-	#auth
-	RewriteRule ^/?$ index.php?page=example/login [L]
+	# Index Routing
+	RewriteRule ^/?$ index.php?page=example/index [L]
+
+    # Auth Routing
+    RewriteRule ^login?$ index.php?page=example/login [L]
+    RewriteRule ^login?$ index.php?page=example/register [L]
+
+    # Dashboard Routing
+    RewriteRule ^dashboard?$ index.php?page=example/dashboard [L]
 
 </IfModule>
 <Files 403.shtml>

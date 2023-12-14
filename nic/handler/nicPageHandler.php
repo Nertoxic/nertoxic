@@ -51,11 +51,21 @@ if(strpos($currPage,'front_') !== false) {
 }
 
 if(strpos($currPage,'auth_') !== false) {
+
+    if($sessionToken ==! NULL) {
+        header(Location: $NIC_BASE_URL);
+    }
+
     include ASSETS.'auth/head.php';
     include ASSETS.'auth/header.php';
 }
 
 if(strpos($currPage,'back_') !== false) {
+
+    if($sessionToken == NULL) {
+        header(Location: $NIC_BASE_URL);
+    }
+
     include ASSETS.'back/head.php';
     include ASSETS.'back/header.php';
 }
