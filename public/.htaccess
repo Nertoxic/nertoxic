@@ -5,7 +5,6 @@
     RewriteBase /
 
     # [!ONLY REMOVE IF YOU KNOW HOW TO REBUILD OR REPLACE!]
-    # Nic Routing
     RewriteRule ^nic/update?$ index.php?page=nic/update [L]
     RewriteRule ^nic/crone?$ index.php?page=nic/update [L]
     RewriteRule ^nic/version?$ index.php?page=nic/version [L]
