@@ -12,6 +12,7 @@
     RewriteRule ^login?$ index.php?page=example/login [L]
     RewriteRule ^register?$ index.php?page=example/register [L]
     RewriteRule ^logout?$ index.php?page=example/logout [L]
+    RewriteRule ^mailverify?$ index.php?page=example/mailverify [L]
 
     # Dashboard Routing
     RewriteRule ^dashboard?$ index.php?page=example/dashboard [L]
