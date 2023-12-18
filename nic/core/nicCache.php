@@ -3,10 +3,13 @@
 $cache = new cache();
 
 class cache
-
 {
 
-
+    /*
+    * cache Write
+    *
+    * Write something inside the cache
+    */
     public function write($path, $data)
     {
         $filePath = CACHE_PATH.$path.'/data.php';
@@ -17,7 +20,11 @@ class cache
 
     }
 
-    // Currently not working due to config inside open_basedir
+    /*
+    * cache Delete
+    *
+    * Delete something inside the cache
+    */
     public function delete($path)
     {
         $filePath = CACHE_PATH.$path.'/data.php';

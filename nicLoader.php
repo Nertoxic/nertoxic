@@ -72,33 +72,6 @@ if($nic_version == NULL) {
     $console->callError(true, 'nicVerion.php', 'The backend couldnt read the nicVersion file, this might couse big problems if that error wont be fixed instantly.');
 }
 
-// JUST FOR TESTING!
-$nic_version_needed_id = $nic_version_id;
-$nic_version_needed = 1;
-// JUST FOR TESTING!
-
-if($nic_version_needed == NULL) {
-    if($currPage == "system_crone") {} else {
-        $console->callError(true, 'nicLoader', 'You didnt setuped the Crone right, please check the docs.');
-    }
-}
-
-if($nic_version_id < $nic_version_needed_id) {
-    if($currPage == "system_crone") {} else {
-        $console->callError(true, 'nicLoader.php', 'You are not using the required Version of the Framework, take a look at https://docs.nertoxic.com/versions#support-table');
-    }
-}
-
-/* Database isnt required
-if($env['NIC_USED_DB'] == NULL) {
-    $console->callError(true, 'nicLoader.php', 'The database type couldnt be loaded, check if the right value has been set inside the .env file.');
-}
-
-if($mysql == NULL) {
-    $console->callError(true, 'nicLoader.php', 'The backend couldnt connect to the database correctly, please check your variables');
-}
-*/
-
 # --------------------------------------------------------------------
 # Load the Page now
 # --------------------------------------------------------------------
