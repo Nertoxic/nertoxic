@@ -17,3 +17,5 @@ require HANDLER_PATH.'nicPageHandler.php';
 <?= $sessionToken; ?>
 <br>
 <?= $user->getField($userid, "amount"); ?>
+<br>
+<?= $date->genDate("Y-m-d H:i:s"); ?>

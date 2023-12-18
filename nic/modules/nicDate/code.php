@@ -8,7 +8,24 @@
 #
 #
 
-$date = new DateTime(null, new DateTimeZone('Europe/Berlin'));
-$datetime = $date->format('Y-m-d H:i:s');
+$date = new date();
 
+class date
+{
+    
+    /*
+    * Get a field value by userid
+    */
+    public function genDate($values)
+    {
+        // Default: Y-m-d H:i:s
+
+        $date = new DateTime(null, new DateTimeZone('Europe/Berlin'));
+        $datetime = $date->format(''.$values.'');
+
+        return $datetime;
+
+    }
+
+}
 ?>
