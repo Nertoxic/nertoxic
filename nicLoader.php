@@ -8,16 +8,16 @@
 #
 #
 
-ob_start();
-session_start();
+ob_start(); # Turn on output buffering
+session_start(); # Start a php session
 
 # --------------------------------------------------------------------
 # Setup path and default variables
 #--------------------------------------------------------------------
 
-$nicConsoleErrorFile = 0;
-$neededPHPVersion = '8.1';
-$sessionToken = $_COOKIE['SESS'];
+$nicConsoleErrorFile = 0; # Set errors to NULL
+$neededPHPVersion = '8.1'; # Set needed php version
+$sessionToken = $_COOKIE['SESS']; # Set Session Token
 
 define('BASE_PATH', __DIR__.'/');
 define('CORE_PATH', __DIR__.'/nic/core/');
