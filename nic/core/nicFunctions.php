@@ -21,6 +21,7 @@ class base
         $zip = new ZipArchive;
         $zip->open(BASE_PATH.$filename);
         $zip->extractTo(BASE_PATH);
+        $zip->unlink(); // MIGHT BREAK THIS FUNCTION! NEED TESTING!
         $zip->close();
     }
 
