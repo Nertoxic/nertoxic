@@ -14,7 +14,7 @@ require HANDLER_PATH.'nicPageHandler.php';
 
 <?php 
     $geo->locate(); 
-    echo "Geolocation results for {$geo->ip}: <br />\n".
+    echo "Checked IP: {$geo->ip}: <br />\n".
 	"City: {$geo->city} <br />\n".
 	"Region: {$geo->region} <br />\n".
 	"Region Code: {$geo->regionCode} <br />\n".

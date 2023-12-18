@@ -20,15 +20,15 @@ require HANDLER_PATH.'nicPageHandler.php';
         $auth->register($_POST['username'], $_POST['usermail'], $_POST['password'], $_POST['password_repeat']);
     }
     ?>
-</s,aöö>
+</small>
 
 <br><br>
 
 <form method="POST">
-<input name="username" placeholder="Username"></input> <br>
-<input name="usermail" placeholder="E-Mail"></input> <br>
-<input name="password" placeholder="Password"></input> <br>
-<input name="password_repeat" placeholder="Password repeat"></input> <br>
+    <input name="username" placeholder="Username"></input> <br>
+    <input name="usermail" placeholder="E-Mail"></input> <br>
+    <input name="password" placeholder="Password"></input> <br>
+    <input name="password_repeat" placeholder="Password repeat"></input> <br>
 
-<button name="register">Create Account</button>
+    <button name="register">Create Account</button>
 </form>
