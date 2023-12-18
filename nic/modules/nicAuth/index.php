@@ -17,6 +17,7 @@
 $moduleIsActive = true;
 
 if($moduleIsActive == true) {
-    include MODULE_PATH.'nicAuth/code.php';
+    include MODULE_PATH.'nicAuth/auth.php';
+    include MODULE_PATH.'nicAuth/user.php';
 }
 ?>

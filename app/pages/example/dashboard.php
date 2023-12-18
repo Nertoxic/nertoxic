@@ -15,3 +15,5 @@ require HANDLER_PATH.'nicPageHandler.php';
 <?= $username; ?>
 <br>
 <?= $sessionToken; ?>
+<br>
+<?= $user->getField($userid, "amount"); ?>
