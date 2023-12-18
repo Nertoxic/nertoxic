@@ -130,13 +130,44 @@ class products Extends mysql
     }
 
     /*
-    * Change Data
+    * Insert into
     *
-    * Here you can write access data or
-    * a key or a link with pw and username
+    * Insert a value into a field
+    * For example pw field
     */
-    public function setData($orderid, $data)
+    public function insert($orderid, $field, $value)
     {
+
+        $RETURNFIELD = self::db()->prepare("INSERT INTO `".$GLOBALS['NIC_PROD_USER_DB']."` SET '".$field."' = :value WHERE `id` = :orderid");
+        $RETURNFIELD->execute(array(":value" => $value, ":orderid" => $orderid));
+        while ($return = $RETURNFIELD-> fetch(PDO::FETCH_ASSOC)){
+
+            $returnValue = $return[''.$field.''];
+
+        }
+
+        return $returnValue;
+
+    }
+
+    /*
+    * Return
+    *
+    * Return the value of a field
+    * For example pw field
+    */
+    public function return($orderid, $field)
+    {
+
+        $RETURNFIELD = self::db()->prepare("SELECT * FROM `".$GLOBALS['NIC_PROD_USER_DB']."` WHERE `id` = :orderid");
+        $RETURNFIELD->execute(array(":orderid" => $orderid));
+        while ($return = $RETURNFIELD-> fetch(PDO::FETCH_ASSOC)){
+
+            $returnValue = $return[''.$field.''];
+
+        }
+
+        return $returnValue;
 
     }
 
