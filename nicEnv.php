@@ -45,6 +45,10 @@ if ($env === false) {
     // Inv variables that need to be global available
     $NIC_INV_MOLLIE_KEY = $env['NIC_INV_MOLLIE_KEY'];
     $NIC_INV_PAYMENT_SUCCESS_PAGE = $env['NIC_INV_PAYMENT_SUCCESS_PAGE'];
+
+    // Product Variables that need to be global available
+    $NIC_PROD_ALL_DB = $env['NIC_PROD_ALL_DB'];
+    $NIC_PROD_USER_DB = $env['NIC_PROD_USER_DB'];
 }
 
 ?>
