@@ -180,7 +180,7 @@ class auth Extends mysql
             $INSERTSESS = self::db()->prepare("UPDATE `".$GLOBALS['NIC_AUTH_DATABASE']."` SET `session` = :sesstoken WHERE `username` = :username");
             $INSERTSESS->execute(array(":sesstoken" => $sessiontoken, ":username" => $username));
 
-            setcookie(''.$NIC_AUTH_COOKIE_NAME.'', $sessiontoken, time()+'864000', '/');
+            setcookie(''.$GLOBALS['NIC_AUTH_COOKIE_NAME'].'', $sessiontoken, time()+'864000', '/');
             header("Location:".$GLOBALS['NIC_BASE_URL'].$GLOBALS['NIC_AUTH_REDERICT_LOGIN']);
         }
 
@@ -205,12 +205,12 @@ class auth Extends mysql
 
         // Remove cookie
         if($authSuccess == true) {
-            unset($_COOKIE[''.$NIC_AUTH_COOKIE_NAME.'']);
-            setcookie(''.$NIC_AUTH_COOKIE_NAME.'', '', -1, '/');
+            unset($_COOKIE[''.$GLOBALS['NIC_AUTH_COOKIE_NAME'].'']);
+            setcookie(''.$GLOBALS['NIC_AUTH_COOKIE_NAME'].'', '', -1, '/');
         }
 
         // Rederict user and return
-        if(!isset($_COOKIE[''.$NIC_AUTH_COOKIE_NAME.''])) {
+        if(!isset($_COOKIE[''.$GLOBALS['NIC_AUTH_COOKIE_NAME'].''])) {
             header("Location:".$GLOBALS['NIC_BASE_URL']);
         } else {
             echo("Error while logging user out, couldnt remove cookie!");
