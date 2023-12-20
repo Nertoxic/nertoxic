@@ -17,7 +17,7 @@ session_start(); # Start a php session
 
 $nicConsoleErrorFile = 0; # Set errors to NULL
 $neededPHPVersion = '8.1'; # Set needed php version
-$sessionToken = $_COOKIE['SESS']; # Set Session Token
+$sessionToken = $_COOKIE[''.$NIC_AUTH_COOKIE_NAME.'']; # Set Session Token
 
 define('BASE_PATH', __DIR__.'/');
 define('CORE_PATH', __DIR__.'/nic/core/');
