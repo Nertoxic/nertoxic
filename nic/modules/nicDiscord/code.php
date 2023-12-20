@@ -43,7 +43,7 @@ class discord
 
             // Avatar URL.
             // Uncoment to replace image set in webhook
-            "avatar_url" => "https://cdn.clusternode.net/image/s/clusternode_net.png",
+            "avatar_url" => "$img",
 
             // Text-to-speech
             "tts" => false,
