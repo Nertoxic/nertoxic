@@ -180,7 +180,7 @@ class auth Extends mysql
             $INSERTSESS = self::db()->prepare("UPDATE `".$GLOBALS['NIC_AUTH_DATABASE']."` SET `session` = :sesstoken WHERE `username` = :username");
             $INSERTSESS->execute(array(":sesstoken" => $sessiontoken, ":username" => $username));
 
-            setcookie('SESS', $sessiontoken, time()+'864000', '/');
+            setcookie(''.$NIC_AUTH_COOKIE_NAME.'', $sessiontoken, time()+'864000', '/');
             header("Location:".$GLOBALS['NIC_BASE_URL'].$GLOBALS['NIC_AUTH_REDERICT_LOGIN']);
         }
 
