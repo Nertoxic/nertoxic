@@ -35,22 +35,22 @@ define('CACHE_PATH', __DIR__.'/storage/cache/');
 try {
 
 // Basic Stuff
-require CORE_PATH.'nicConsole.php'; # Load the Console
-require BASE_PATH.'nicEnv.php'; # Load Env variables
-require BASE_PATH.'nicVersion.php'; # Load NIC Version
-require BASE_PATH.'vendor/autoload.php'; # Loa all vendor files
+require_once CORE_PATH.'nicConsole.php'; # Load the Console
+require_once BASE_PATH.'nicEnv.php'; # Load Env variables
+require_once BASE_PATH.'nicVersion.php'; # Load NIC Version
+require_once BASE_PATH.'vendor/autoload.php'; # Loa all vendor files
 
 // Cache System
-require CORE_PATH.'nicCache.php'; # Load all cache functions
-require CACHE_PATH.'load.php'; # Load all cached files
+require_once CORE_PATH.'nicCache.php'; # Load all cache functions
+require_once CACHE_PATH.'load.php'; # Load all cached files
 
 // Database loading
-require DB_PATH.'MySQL/'.$env['NIC_USED_DB'].'Build.php';
+require_once DB_PATH.'MySQL/'.$env['NIC_USED_DB'].'Build.php';
 
 // Additional Stuff
-require MODULE_PATH.'nicModules.php'; # Load all included modules
-require SECURITY_PATH.'nicSecurity.php'; # Load the Security functions
-require CORE_PATH.'nicFunctions.php'; # Load the Security functions
+require_once MODULE_PATH.'nicModules.php'; # Load all included modules
+require_once SECURITY_PATH.'nicSecurity.php'; # Load the Security functions
+require_once CORE_PATH.'nicFunctions.php'; # Load the Security functions
 
 } catch (Exception $e) {
     $nicCon->callError(true, 'nicLoader.php', 'There was an error while loading the loader.');
@@ -76,5 +76,5 @@ if($nic_version == NULL) {
 # Load the Page now
 # --------------------------------------------------------------------
 
-require BASE_PATH.'nicRouter.php'; # Load the router
+require_once BASE_PATH.'nicRouter.php'; # Load the router
 ?>
