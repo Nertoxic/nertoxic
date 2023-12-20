@@ -28,10 +28,10 @@ class inv Extends mysql
             $newAmount = $useramount + $amount;
         }
 
-        $CHANGEAMOUNT = self::db()->prepare("UPDATE `users` SET `amount` = :newamount WHERE `id` = :userid");
+        $CHANGEAMOUNT = self::db()->prepare("UPDATE `".$GLOBALS['NIC_AUTH_DATABASE']."` SET `amount` = :newamount WHERE `id` = :userid");
         $CHANGEAMOUNT->execute(array(":newamount" => $newAmount, ":userid" => $userid));
 
-        $CREATEINVOICE = self::db()->prepare("INSERT INTO `invoices` SET `amount` = :amount, `reason` = :reason, `userid` = :userid");
+        $CREATEINVOICE = self::db()->prepare("INSERT INTO `".$GLOBALS['NIC_INV_DATABASE']."` SET `amount` = :amount, `reason` = :reason, `userid` = :userid");
         $CREATEINVOICE->execute(array(":amount" => $amount, ":reason" => $reason, ":userid" => $userid));
 
 

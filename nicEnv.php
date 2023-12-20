@@ -50,6 +50,7 @@ if ($env === false) {
     // Product Variables that need to be global available
     $NIC_PROD_ALL_DB = $env['NIC_PROD_ALL_DB'];
     $NIC_PROD_USER_DB = $env['NIC_PROD_USER_DB'];
+    $NIC_INV_DATABASE = $env['NIC_INV_DATABASE'];
 }
 
 ?>
