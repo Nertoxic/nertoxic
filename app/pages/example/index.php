@@ -12,4 +12,4 @@ $currPage = 'front_index';
 require HANDLER_PATH.'nicPageHandler.php';
 ?>
 
-Welcome!
+Welcome! <?= $NIC_AUTH_COOKIE_NAME; ?>
