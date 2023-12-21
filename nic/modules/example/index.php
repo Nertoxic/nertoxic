@@ -3,7 +3,7 @@
 
 # --------------------------------------------------------------------
 # Module: example
-# Creator: Nertoxic
+# Creator: Nertoxic (DevelopingFlakes)
 # Desc: This module is for testing the module system, go to https://domain.com/test/modules to see if the modules are working
 # --------------------------------------------------------------------
 
