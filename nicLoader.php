@@ -46,7 +46,7 @@ require_once CORE_PATH.'nicCache.php'; # Load all cache functions
 require_once CACHE_PATH.'load.php'; # Load all cached files
 
 // Database loading
-require_once DB_PATH.$env['NIC_USED_DB'].'Build.php';
+require_once DB_PATH.$env['NIC_USED_DB'].'Build.php'; # Load MYSQL Database
 
 // Additional Stuff
 require_once MODULE_PATH.'nicModules.php'; # Load all included modules
