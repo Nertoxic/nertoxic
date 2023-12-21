@@ -16,7 +16,7 @@ class date
     /*
     * Get a field value by userid
     */
-    public function genDate($values)
+    public function generate($values)
     {
         // Default: Y-m-d H:i:s
 
