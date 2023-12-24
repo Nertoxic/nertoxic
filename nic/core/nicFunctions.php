@@ -14,14 +14,14 @@ class base
     public function update()
     {
         $url = "https://nertoxic.com/download/latest.zip";
-        $filename = "nertoxic.zip";
+        $filename = "update-".rand(1000,9999).".zip";
 
         file_put_contents(BASE_PATH.$filename, fopen($url, 'r'));
 
         $zip = new ZipArchive;
         $zip->open(BASE_PATH.$filename);
         $zip->extractTo(BASE_PATH);
-        $zip->unlink(); // MIGHT BREAK THIS FUNCTION! NEED TESTING!
+        //$zip->unlink(); // MIGHT BREAK THIS FUNCTION! NEED TESTING!
         $zip->close();
     }
 
