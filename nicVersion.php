@@ -8,7 +8,7 @@
 #
 #
 
-$nic_version = "1.0.2"; // Editing this may couse a unfixable system error
-$nic_version_id = 102; // Setting an id to compare versions.
+$nic_version = "1.0.3"; // Editing this may couse a unfixable system error
+$nic_version_id = 103; // Setting an id to compare versions.
 
 ?>
