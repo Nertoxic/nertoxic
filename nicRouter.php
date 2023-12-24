@@ -35,15 +35,15 @@ if(isset($_GET['page'])) {
     /*
     * Include different footers
     */
-    if(strpos($currPage,'front_') == true) {
+    if(strpos($currPage,'front_') == !false) {
         include BASE_PATH.'storage/assets/front/footer.php';
     }
 
-    if(strpos($currPage,'back_') == true) {
+    if(strpos($currPage,'back_') == !false) {
         include BASE_PATH.'storage/assets/back/footer.php';
     }
 
-    if(strpos($currPage,'auth_') == true) {
+    if(strpos($currPage,'auth_') == !false) {
         include BASE_PATH.'storage/assets/auth/footer.php';
     }
 
