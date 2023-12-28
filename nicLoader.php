@@ -54,7 +54,7 @@ require_once SECURITY_PATH.'nicSecurity.php'; # Load the Security functions
 require_once CORE_PATH.'nicFunctions.php'; # Load the Security functions
 
 } catch (Exception $e) {
-    $nicCon->callError(true, 'nicLoader.php', 'There was an error while loading the loader.');
+    $console->callError(true, 'nicLoader.php', 'There was an error while loading the loader.');
 }
 
 # --------------------------------------------------------------------
