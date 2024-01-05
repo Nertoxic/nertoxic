@@ -72,6 +72,9 @@ class curl
            "Authorization: Bearer {".$token."}",
         );
 
+        $resp = curl_exec($opt);
+        curl_close($opt);
+
         return $resp;
 
     }
